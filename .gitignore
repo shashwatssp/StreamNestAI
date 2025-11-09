@@ -1,0 +1,53 @@
+# Node.js (React frontend)
+node_modules/
+build/
+dist/
+.env
+.env.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vscode/
+
+# Golang (Backend)
+bin/
+obj/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+vendor/
+*.test
+
+# MongoDB/Database
+data/
+dump/
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs and editors
+.idea/
+*.iml
+*.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+
+# Coverage and debug
+coverage/
+*.out
+
+# Misc
+*.swp
+*.bak
+*.backup
