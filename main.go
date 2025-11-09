@@ -21,6 +21,8 @@ func main() {
 
 	router.POST("/addmovie", controller.AddMovie())
 
+	router.POST("/register", controller.RegisterUser())
+
 	if err := router.Run(": 8080"); err != nil {
 		fmt.Println("ERROR ", err)
 	}
