@@ -179,61 +179,79 @@ func AdminReviewUpdate(client *mongo.Client) gin.HandlerFunc {
 
 	}
 }
-
 func GetReviewRanking(admin_review string, client *mongo.Client, c *gin.Context) (string, int, error) {
-	rankings, err := GetRankings(client, c)
+	log.Println("Starting GetReviewRanking")
 
+	rankings, err := GetRankings(client, c)
 	if err != nil {
+		log.Println("Error fetching rankings:", err)
 		return "", 0, err
 	}
+	log.Println("Rankings fetched:", rankings)
 
 	sentimentDelimited := ""
-
 	for _, ranking := range rankings {
 		if ranking.RankingValue != 999 {
-			sentimentDelimited = sentimentDelimited + ranking.RankingName + ","
+			sentimentDelimited += ranking.RankingName + ","
 		}
 	}
-
 	sentimentDelimited = strings.Trim(sentimentDelimited, ",")
+	log.Println("Sentiment options:", sentimentDelimited)
 
 	err = godotenv.Load(".env")
-
 	if err != nil {
 		log.Println("Warning: .env file not found")
 	}
 
+	// You can use either DEEPSEEK_API_KEY or keep OPENAI_API_KEY
 	OpenAiApiKey := os.Getenv("OPENAI_API_KEY")
+	log.Println("API Key loaded:", OpenAiApiKey != "")
 
 	if OpenAiApiKey == "" {
-		return "", 0, errors.New("could not read OPENAI_API_KEY")
+		log.Println("API Key is empty")
+		return "", 0, errors.New("could not read API key")
 	}
 
-	llm, err := openai.New(openai.WithToken(OpenAiApiKey))
-
+	// Initialize with DeepSeek base URL and model
+	llm, err := openai.New(
+		openai.WithToken(OpenAiApiKey),
+		openai.WithBaseURL("https://api.deepseek.com"),
+		openai.WithModel("deepseek-chat"), // or "deepseek-reasoner" for R1
+	)
 	if err != nil {
+		log.Println("Error creating DeepSeek client:", err)
 		return "", 0, err
 	}
 
 	base_prompt_template := os.Getenv("BASE_PROMPT_TEMPLATE")
+	log.Println("Base prompt template:", base_prompt_template)
+
+	if base_prompt_template == "" {
+		log.Println("BASE_PROMPT_TEMPLATE is empty")
+		return "", 0, errors.New("missing base prompt template")
+	}
 
 	base_prompt := strings.Replace(base_prompt_template, "{rankings}", sentimentDelimited, 1)
+	fullPrompt := base_prompt + admin_review
+	log.Println("Full prompt sent to DeepSeek:", fullPrompt)
 
-	response, err := llm.Call(c, base_prompt+admin_review)
-
+	response, err := llm.Call(c, fullPrompt)
 	if err != nil {
+		log.Println("DeepSeek call error:", err)
 		return "", 0, err
 	}
-	rankVal := 0
+	log.Println("DeepSeek response:", response)
 
+	rankVal := 0
 	for _, ranking := range rankings {
 		if ranking.RankingName == response {
 			rankVal = ranking.RankingValue
 			break
 		}
 	}
-	return response, rankVal, nil
+	log.Println("Rank value matched:", rankVal)
 
+	return response, rankVal, nil
 }
 
 func GetRankings(client *mongo.Client, c *gin.Context) ([]models.Ranking, error) {
