@@ -122,20 +122,20 @@ func LoginUser(client *mongo.Client) gin.HandlerFunc {
 			return
 		}
 		http.SetCookie(c.Writer, &http.Cookie{
-			Name:  "access_token",
-			Value: token,
-			Path:  "/",
-			// Domain:   "localhost",
+			Name:     "access_token",
+			Value:    token,
+			Path:     "/",
+			Domain:   "localhost",
 			MaxAge:   86400,
 			Secure:   true,
 			HttpOnly: true,
 			SameSite: http.SameSiteNoneMode,
 		})
 		http.SetCookie(c.Writer, &http.Cookie{
-			Name:  "refresh_token",
-			Value: refreshToken,
-			Path:  "/",
-			// Domain:   "localhost",
+			Name:     "refresh_token",
+			Value:    refreshToken,
+			Path:     "/",
+			Domain:   "localhost",
 			MaxAge:   604800,
 			Secure:   true,
 			HttpOnly: true,
@@ -179,15 +179,15 @@ func LogoutHandler(client *mongo.Client) gin.HandlerFunc {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Error logging out"})
 			return
 		}
-		// c.SetCookie(
-		// 	"access_token",
-		// 	"",
-		// 	-1, // MaxAge negative → delete immediately
-		// 	"/",
-		// 	"localhost", // Adjust to your domain
-		// 	true,        // Use true in production with HTTPS
-		// 	true,        // HttpOnly
-		// )
+		c.SetCookie(
+			"access_token",
+			"",
+			-1, // MaxAge negative → delete immediately
+			"/",
+			"localhost", // Adjust to your domain
+			true,        // Use true in production with HTTPS
+			true,        // HttpOnly
+		)
 		http.SetCookie(c.Writer, &http.Cookie{
 			Name:  "access_token",
 			Value: "",
@@ -199,16 +199,16 @@ func LogoutHandler(client *mongo.Client) gin.HandlerFunc {
 			SameSite: http.SameSiteNoneMode,
 		})
 
-		// // Clear the refresh_token cookie
-		// c.SetCookie(
-		// 	"refresh_token",
-		// 	"",
-		// 	-1,
-		// 	"/",
-		// 	"localhost",
-		// 	true,
-		// 	true,
-		// )
+		// Clear the refresh_token cookie
+		c.SetCookie(
+			"refresh_token",
+			"",
+			-1,
+			"/",
+			"localhost",
+			true,
+			true,
+		)
 		http.SetCookie(c.Writer, &http.Cookie{
 			Name:     "refresh_token",
 			Value:    "",
