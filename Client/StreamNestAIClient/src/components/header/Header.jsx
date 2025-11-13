@@ -40,7 +40,7 @@ const Header = ({handleLogout}) => {
                     <Nav className ="ms-auto align-items-center" style={{padding: '10px'}}>
                         {auth ? (
                         <>
-                            <span className="me-3 text-light" style={{padding: '0px 10px'}}>
+                            <span className="me-3 text-light" style={{padding: '0px 15px'}}>
                                 Hello, <strong>{auth.first_name}</strong>
                             </span>
                             <Button variant="outline-light" size="sm" onClick={handleLogout}>
@@ -53,14 +53,16 @@ const Header = ({handleLogout}) => {
                                     variant="outline-info"
                                     size="sm"
                                     className="me-2"
-                                    onClick={() => navigate("/login")} 
+                                    onClick={() => navigate("/login")}
+                                    style={{padding: '0px 15px'}}
                                 >
                                     Login
                                 </Button>
                                 <Button
                                     variant="info"
                                     size="sm"
-                                    onClick={() => navigate("/register")}  
+                                    onClick={() => navigate("/register")}
+                                    style={{padding: '0px 15px'}}
                                 >
                                     Register
                                 </Button>                        
