@@ -71,7 +71,7 @@ func main() {
 	routes.SetupUnProtectedRoutes(router, client)
 	routes.SetupProtectedRoutes(router, client)
 
-	if err := router.Run(": 8080"); err != nil {
+	if err := router.Run(":8080"); err != nil {
 		fmt.Println("ERROR ", err)
 	}
 }
