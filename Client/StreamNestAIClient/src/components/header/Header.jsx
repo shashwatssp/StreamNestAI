@@ -37,10 +37,10 @@ const Header = ({handleLogout}) => {
                         </Nav.Link>
                     </Nav>
     
-                    <Nav className ="ms-auto align-items-center">
+                    <Nav className ="ms-auto align-items-center" style={{padding: '10px'}}>
                         {auth ? (
                         <>
-                            <span className="me-3 text-light">
+                            <span className="me-3 text-light" style={{padding: '0px 10px'}}>
                                 Hello, <strong>{auth.first_name}</strong>
                             </span>
                             <Button variant="outline-light" size="sm" onClick={handleLogout}>
