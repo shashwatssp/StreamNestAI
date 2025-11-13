@@ -33,7 +33,7 @@ const useAxiosPrivate = () =>{
 
      useEffect(() => {
 
-        axiosAuth.interceptors.request.use(
+        axiosAuth.interceptors.response.use(
         response => response,
         async error => {
             console.log('⚠ Interceptor caught error:', error);
