@@ -304,69 +304,58 @@ async function executeToolCall(toolName: string, args: any, BACKEND_URL: string,
 		}
 
 
-case 'search_by_keyword': {
-    const { keyword } = args;
-    const cacheKey = `search_${keyword.toLowerCase()}`;
+		case 'search_by_keyword': {
+			const { keyword } = args;
+			const cacheKey = `search_${keyword.toLowerCase()}`;
 
-    // Try cache first
-    const cached = await CACHE.get(cacheKey, 'json');
-    if (cached) {
-        console.log('✅ Cache HIT - search:', keyword);
-        return cached;
-    }
+			// Try cache first
+			const cached = await CACHE.get(cacheKey, 'json');
+			if (cached) {
+				console.log('✅ Cache HIT - search:', keyword);
+				return cached;
+			}
 
-    // Cache miss
-    console.log('❌ Cache MISS - searching:', keyword);
-    const url = `${BACKEND_URL}/movies`;
-    console.log('Fetching from:', url);  // ← ADD THIS
-    
-    const res = await fetch(url);
-    console.log('Response status:', res.status);  // ← ADD THIS
-    
-    if (!res.ok) {
-        throw new Error(`Backend returned ${res.status}: ${res.statusText}`);
-    }
-    
-    const text = await res.text();
-    console.log('Response text length:', text.length);  // ← ADD THIS
-    console.log('First 100 chars:', text.substring(0, 100));  // ← ADD THIS
-    
-    // Check if response is empty
-    if (!text || text.trim() === '') {
-        throw new Error('Backend returned empty response');
-    }
-    
-    let data;
-    try {
-        data = JSON.parse(text);
-    } catch (e) {
-        console.error('Failed to parse JSON:', text.substring(0, 200));
-        throw new Error(`Invalid JSON from backend: ${text.substring(0, 100)}`);
-    }
+			// Cache miss
+			console.log('❌ Cache MISS - searching:', keyword);
+			const url = `${BACKEND_URL}/movies`;
+			const res = await fetch(url);
 
-    if (!Array.isArray(data)) {
-        console.error('Response is not an array:', typeof data);
-        throw new Error(`Backend returned non-array: ${JSON.stringify(data).substring(0, 100)}`);
-    }
+			if (!res.ok) {
+				throw new Error(`Backend returned ${res.status}: ${res.statusText}`);
+			}
 
-    console.log('Got', data.length, 'movies from backend');
+			const text = await res.text();
 
-    const keywordLower = keyword.toLowerCase();
-    const filtered = data.filter((m: any) => {
-        const titleMatch = m.title && m.title.toLowerCase().includes(keywordLower);
-        const genreMatch = m.genre && Array.isArray(m.genre) && 
-            m.genre.some((g: any) => g.genre_name && g.genre_name.toLowerCase().includes(keywordLower));
-        return titleMatch || genreMatch;
-    });
+			let data;
+			try {
+				data = JSON.parse(text);
+			} catch (e) {
+				throw new Error(`Invalid JSON from backend`);
+			}
 
-    // Store search results for 100 minutes
-    await CACHE.put(cacheKey, JSON.stringify(filtered), {
-        expirationTtl: 6000,
-    });
+			if (!Array.isArray(data)) {
+				throw new Error(`Backend returned non-array`);
+			}
 
-    console.log('✅ Cached search:', keyword, '- found:', filtered.length);
-    return filtered;
-}
+			console.log('Got', data.length, 'movies from backend');
+
+			const keywordLower = keyword.toLowerCase();
+
+			// 🎯 SEARCHES ALL FIELDS automatically!
+			const filtered = data.filter((m: any) => {
+				// Convert entire movie to string and search
+				const movieStr = JSON.stringify(m).toLowerCase();
+				return movieStr.includes(keywordLower);
+			});
+
+			// Store search results for 100 minutes
+			await CACHE.put(cacheKey, JSON.stringify(filtered), {
+				expirationTtl: 6000,
+			});
+
+			console.log('✅ Cached search:', keyword, '- found:', filtered.length);
+			return filtered;
+		}
 
 
 
