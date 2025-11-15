@@ -1,0 +1,8 @@
+name = "streamnest-mcp"
+main = "src/index.ts"
+compatibility_date = "2025-11-15"
+
+node_compat = true
+
+[vars]
+BACKEND_URL = "https://streamnestai.onrender.com"

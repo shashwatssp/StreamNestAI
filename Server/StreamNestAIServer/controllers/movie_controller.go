@@ -2,7 +2,9 @@ package controllers
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -407,5 +409,87 @@ func GetGenres(client *mongo.Client) gin.HandlerFunc {
 		}
 		c.JSON(http.StatusOK, genres)
 
+	}
+}
+
+func NaturalLanguageMovieSearch(client *mongo.Client) gin.HandlerFunc {
+	return func(c *gin.Context) {
+		query := c.Query("q")
+
+		if query == "" {
+			c.JSON(http.StatusBadRequest, gin.H{"error": "Query parameter 'q' is required"})
+			return
+		}
+
+		// Using existing DeepSeek setup to convert NL to MongoDB filter
+		err := godotenv.Load(".env")
+		if err != nil {
+			log.Println("Warning: .env file not found")
+		}
+
+		OpenAiApiKey := os.Getenv("OPENAI_API_KEY")
+
+		llm, err := openai.New(
+			openai.WithToken(OpenAiApiKey),
+			openai.WithBaseURL("https://api.deepseek.com"),
+			openai.WithModel("deepseek-chat"),
+		)
+
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to initialize AI"})
+			return
+		}
+
+		// Prompt to convert natural language to MongoDB filter
+		prompt := fmt.Sprintf(`Convert this natural language movie search into MongoDB filter JSON.
+User query: "%s"
+
+Available fields:
+- title (string)
+- genre.genre_name (string)
+- ranking.ranking_value (int, 1-10, lower is better)
+- year (int)
+
+Examples:
+"action movies from 2020" → {"genre.genre_name": "Action", "year": 2020}
+"highly rated sci-fi" → {"genre.genre_name": "Sci-Fi", "ranking.ranking_value": {"$lte": 3}}
+
+Return ONLY valid MongoDB filter JSON, no explanation:`, query)
+
+		filterJSON, err := llm.Call(c, prompt)
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "AI processing failed"})
+			return
+		}
+
+		// Parse the AI-generated filter
+		var filter bson.M
+		if err := json.Unmarshal([]byte(filterJSON), &filter); err != nil {
+			// Fallback: search by title if AI output is invalid
+			filter = bson.M{"title": bson.M{"$regex": query, "$options": "i"}}
+		}
+
+		var ctx, cancel = context.WithTimeout(c, 100*time.Second)
+		defer cancel()
+
+		var movieCollection *mongo.Collection = database.OpenCollection("movies", client)
+
+		// Limit results to 20
+		findOptions := options.Find().SetLimit(20)
+
+		cursor, err := movieCollection.Find(ctx, filter, findOptions)
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Database query failed"})
+			return
+		}
+		defer cursor.Close(ctx)
+
+		var movies []models.Movie
+		if err := cursor.All(ctx, &movies); err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+			return
+		}
+
+		c.JSON(http.StatusOK, movies)
 	}
 }

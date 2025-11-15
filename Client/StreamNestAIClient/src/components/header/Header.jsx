@@ -35,6 +35,9 @@ const Header = ({handleLogout}) => {
                         <Nav.Link as = {NavLink} to="/recommended">
                             Recommended
                         </Nav.Link>
+                        <Nav.Link as = {NavLink} to="/explore">
+                            ✨ Explore
+                        </Nav.Link>
                     </Nav>
     
                     <Nav className ="ms-auto align-items-center" style={{padding: '10px'}}>

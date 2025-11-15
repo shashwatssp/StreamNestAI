@@ -13,6 +13,7 @@ import useAuth from './hooks/useAuth';
 import StreamMovie from './components/stream/StreamMovie';
 
 import {Route, Routes, useNavigate} from 'react-router-dom'
+import Explore from './components/explore/Explore';
 
 function App() {
 
@@ -48,6 +49,7 @@ function App() {
         <Route path="/login" element={<Login/>}></Route>
         <Route element = {<RequiredAuth/>}>
             <Route path="/recommended" element={<Recommended/>}></Route>
+            <Route path="/explore" element={<Explore />} />
             <Route path="/review/:imdb_id" element={<Review/>}></Route>
             <Route path="/stream/:yt_id" element={<StreamMovie/>}></Route>
         </Route>

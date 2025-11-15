@@ -1,0 +1,34 @@
+.explore-container {
+    min-height: calc(100vh - 100px);
+}
+
+.chat-history {
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.message.user {
+    background-color: #e3f2fd;
+    text-align: right;
+}
+
+.message.assistant {
+    background-color: #f1f8e9;
+    text-align: left;
+}
+
+.quick-prompts .btn {
+    transition: all 0.3s ease;
+}
+
+.quick-prompts .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
