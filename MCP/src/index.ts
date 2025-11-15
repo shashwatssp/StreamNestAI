@@ -188,9 +188,9 @@ async function executeToolCall(toolName: string, args: any, BACKEND_URL: string,
 				throw new Error(`Not an array`);
 			}
 
-			// Store in cache for 1 hour
+			// Store in cache for 10 hours
 			await CACHE.put(cacheKey, JSON.stringify(data), {
-				expirationTtl: 3600,
+				expirationTtl: 36000,
 			});
 
 			console.log('✅ Cached all_movies for 1 hour');
@@ -359,9 +359,9 @@ case 'search_by_keyword': {
         return titleMatch || genreMatch;
     });
 
-    // Store search results for 10 minutes
+    // Store search results for 100 minutes
     await CACHE.put(cacheKey, JSON.stringify(filtered), {
-        expirationTtl: 600,
+        expirationTtl: 6000,
     });
 
     console.log('✅ Cached search:', keyword, '- found:', filtered.length);
