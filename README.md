@@ -61,35 +61,6 @@ This project demonstrates enterprise-grade architecture patterns including:
 
 ---
 
-## 🏗️ Architecture
-
-Frontend
-  ↓
-React App (Vite + Vercel)
-  ↓
-─────────────────────────────────────────
-Edge Layer (Cloudflare Workers - 300+ PoPs)
-  ├─ MCP Protocol Handler (AI Interface)
-  └─ Workers KV Cache (99% hit rate, 10-50x faster)
-─────────────────────────────────────────
-  ↓ (1% cache miss)
-Backend
-  ↓
-Go Backend (Render)
-  ├─ RESTful API
-  ├─ Business Logic
-  └─ Authentication
-  ↓
-Database
-  ↓
-MongoDB Atlas
-  ├─ Movie Database
-  ├─ User Data
-  └─ Ratings & Reviews
-
-
-
-
 
 ### Cache Strategy
 
