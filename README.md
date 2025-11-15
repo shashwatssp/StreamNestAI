@@ -2,8 +2,8 @@
 
 <div align="center">
 
-![JavaScript](https://img.shields.io/badge/JavaScript-52.9%25-yellow?style=for-the-badge&logo=javascript)
-![Go](https://img.shields.io/badge/Go-45.8%25-00ADD8?style=for-the-badge&logo=go)
+![Go](https://img.shields.io/badge/Go-52.9%25-00ADD8?style=for-the-badge&logo=go)
+![JavaScript](https://img.shields.io/badge/JavaScript-45.8%25-yellow?style=for-the-badge&logo=javascript)
 ![TypeScript](https://img.shields.io/badge/TypeScript-MCP-3178C6?style=for-the-badge&logo=typescript)
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-Workers-F38020?style=for-the-badge&logo=cloudflare)
@@ -64,42 +64,43 @@ This project demonstrates enterprise-grade architecture patterns including:
 ## 🏗️ Architecture
 
 ┌─────────────────┐
-│ React App │ (Vite + Vercel)
-│ (Frontend) │
+│   React App     │ (Vite + Vercel)
+│   (Frontend)    │
 └────────┬────────┘
-│
-▼
+         │
+         ▼
 ┌─────────────────────────────────────────┐
-│ Cloudflare Workers Edge (300+ PoPs) │
-│ │
-│ ┌──────────────────────────────────┐ │
-│ │ MCP Protocol Handler │ │
-│ │ (AI-friendly interface) │ │
-│ └──────────────────────────────────┘ │
-│ │
-│ ┌──────────────────────────────────┐ │
-│ │ Cloudflare Workers KV Cache │ │
-│ │ - 99% hit rate │ │
-│ │ - 10-50x faster responses │ │
-│ │ - Global replication │ │
-│ └──────────────────────────────────┘ │
+│   Cloudflare Workers Edge (300+ PoPs)   │
+│                                          │
+│  ┌──────────────────────────────────┐  │
+│  │   MCP Protocol Handler            │  │
+│  │   (AI-friendly interface)         │  │
+│  └──────────────────────────────────┘  │
+│                                          │
+│  ┌──────────────────────────────────┐  │
+│  │   Cloudflare Workers KV Cache     │  │
+│  │   - 99% hit rate                  │  │
+│  │   - 10-50x faster responses       │  │
+│  │   - Global replication            │  │
+│  └──────────────────────────────────┘  │
 └────────────────┬────────────────────────┘
-│ (1% cache miss)
-▼
+                 │ (1% cache miss)
+                 ▼
 ┌─────────────────────────────────────────┐
-│ Go Backend (Render) │
-│ - RESTful API │
-│ - Business Logic │
-│ - Authentication │
+│         Go Backend (Render)              │
+│   - RESTful API                          │
+│   - Business Logic                       │
+│   - Authentication                       │
 └────────────────┬────────────────────────┘
-│
-▼
+                 │
+                 ▼
 ┌─────────────────────────────────────────┐
-│ MongoDB Atlas │
-│ - Movie Database │
-│ - User Data │
-│ - Ratings & Reviews │
+│         MongoDB Atlas                    │
+│   - Movie Database                       │
+│   - User Data                            │
+│   - Ratings & Reviews                    │
 └─────────────────────────────────────────┘
+
 
 
 ### Cache Strategy
@@ -233,33 +234,29 @@ Now ask Claude: *"What action movies are available in StreamNest?"*
 
 StreamNestAI/
 ├── Client/
-│ └── StreamNestAIClient/ # React Frontend
-│ ├── src/
-│ │ ├── components/
-│ │ │ ├── explore/ # AI-powered explore page
-│ │ │ ├── movies/
-│ │ │ ├── auth/
-│ │ │ └── ...
-│ │ ├── hooks/ # Custom React hooks
-│ │ └── utils/
-│ └── package.json
+│   └── StreamNestAIClient/          # React Frontend
+│       ├── src/
+│       │   ├── components/
+│       │   │   ├── explore/         # AI-powered explore page
+│       │   │   ├── movies/
+│       │   │   ├── auth/
+│       │   │   └── ...
+│       │   ├── hooks/               # Custom React hooks
+│       │   └── utils/
+│       └── package.json
 │
-├── MCP-CDN/ # Edge Computing Layer
-│ ├── src/
-│ │ └── index.ts # MCP server + KV cache
-│ ├── wrangler.toml # Cloudflare config
-│ └── package.json
+├── MCP-CDN/                         # Edge Computing Layer
+│   ├── src/
+│   │   └── index.ts                 # MCP server + KV cache
+│   ├── wrangler.toml                # Cloudflare config
+│   └── package.json
 │
 ├── Server/
-│ └── StreamNestAIServer/ # Go Backend
-│ ├── controller/ # API handlers
-│ ├── middleware/ # Auth, CORS, etc.
-│ ├── models/ # Data models
-│ ├── routes/ # API routes
-│ └── main.go
+│   └── StreamNestAIServer/          # Go Backend
+│       ├── controller/              # API handlers
+│       ├── middleware/              # Auth, CORS, etc.
+│       ├── models/                  # Data models
+│       ├── routes/                  # API routes
+│       └── main.go
 │
 └── README.md
-
-
-### System Overview
-
