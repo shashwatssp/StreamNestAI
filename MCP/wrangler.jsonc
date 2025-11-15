@@ -9,7 +9,17 @@
 	"compatibility_date": "2025-11-15",
 	"observability": {
 		"enabled": true
-	}
+	},
+	"vars": {
+		"BACKEND_URL": "https://streamnestai.onrender.com"
+	},
+	"kv_namespaces": [
+		{
+			"binding": "MOVIE_CACHE",
+			"id": "d081f15eafe5462db77de0916dc74841",
+			"remote": true
+		}
+	]
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement

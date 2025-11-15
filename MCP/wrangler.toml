@@ -6,3 +6,7 @@ node_compat = true
 
 [vars]
 BACKEND_URL = "https://streamnestai.onrender.com"
+
+[[kv_namespaces]]
+binding = "MOVIE_CACHE"
+id = "d081f15eafe5462db77de0916dc74841"
