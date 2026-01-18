@@ -27,22 +27,25 @@ const Login = () => {
 
         try {
             const response = await axiosClient.post('/login', { email, password });
-            console.log(response.data);
+            console.log('Login response:', response.data);
             if (response.data.error) {
                 setError(response.data.error);
                 return;
             }
-           // console.log(response.data);
+            
+            // Set auth state with user data (tokens are stored in HTTP-only cookies)
             setAuth(response.data);
             
-           // localStorage.setItem('user', JSON.stringify(response.data));
-            // Handle successful login (e.g., store token, redirect)
-           navigate(from, {replace: true});
-           //navigate('/');
+            // Navigate to the intended destination
+            navigate(from, {replace: true});
 
         } catch (err) {
-            console.error(err);
-            setError('Invalid email or password');
+            console.error('Login error:', err);
+            if (err.response?.data?.error) {
+                setError(err.response.data.error);
+            } else {
+                setError('Invalid email or password');
+            }
         } finally {
             setLoading(false);
         }

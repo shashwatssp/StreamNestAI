@@ -61,8 +61,8 @@ const useAxiosPrivate = () =>{
             return new Promise((resolve, reject) => {
                 axiosAuth
                 .post('/refresh')
-                .then(() => {
-                
+                .then((refreshResponse) => {
+                    console.log('Token refreshed successfully');
                     processQueue(null);
 
                 axiosAuth(originalRequest)
@@ -71,12 +71,13 @@ const useAxiosPrivate = () =>{
 
                 })
                 .catch(refreshError => {
-
-                        processQueue(refreshError, null);
-                        
-                        localStorage.removeItem('user');
-                        setAuth(null); // Clear auth state
-                        reject(refreshError); // fail the original promise chain
+                    console.error('Refresh token failed:', refreshError);
+                    processQueue(refreshError, null);
+                    
+                    // Clear auth state and redirect to login
+                    setAuth(null);
+                    window.location.href = '/login';
+                    reject(refreshError); // fail the original promise chain
                 })
                 .finally(() => {
                         isRefreshing = false;
