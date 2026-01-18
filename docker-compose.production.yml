@@ -74,8 +74,8 @@ services:
     container_name: streamnest-frontend
     restart: unless-stopped
     environment:
-      - REACT_APP_API_URL=http://localhost:8080
-      - REACT_APP_WS_URL=ws://localhost:8080/ws
+      - REACT_APP_API_URL=/api
+      - REACT_APP_WS_URL=/ws
     ports:
       - "3000:80"
     depends_on:

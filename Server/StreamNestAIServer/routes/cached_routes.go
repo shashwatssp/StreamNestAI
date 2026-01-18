@@ -2,6 +2,8 @@ package routes
 
 import (
 	"context"
+	"log"
+	"os"
 	"strconv"
 	"time"
 
@@ -19,11 +21,23 @@ func SetupCachedRoutes(router *gin.Engine) {
 		return
 	}
 
-	// Initialize Redis service for cached controllers using the same Redis Cloud config
+	// Initialize Redis service for cached controllers using environment variables
+	redisHost := os.Getenv("REDIS_HOST")
+	redisPort := os.Getenv("REDIS_PORT")
+	redisPassword := os.Getenv("REDIS_PASSWORD")
+
+	// Validate required environment variables
+	if redisHost == "" {
+		log.Fatal("REDIS_HOST environment variable is required")
+	}
+	if redisPort == "" {
+		log.Fatal("REDIS_PORT environment variable is required")
+	}
+
 	redisConfig := cache.CacheConfig{
-		Host:         "redis-13554.crce182.ap-south-1-1.ec2.cloud.redislabs.com",
-		Port:         "13554",
-		Password:     "", // Set if Redis Cloud requires password
+		Host:         redisHost,
+		Port:         redisPort,
+		Password:     redisPassword, // Can be empty if no password required
 		DB:           0,
 		KeyPrefix:    "streamnestai",
 		DefaultTTL:   5 * time.Minute,
@@ -36,6 +50,8 @@ func SetupCachedRoutes(router *gin.Engine) {
 
 	redisService, err := cache.NewRedisService(redisConfig)
 	if err != nil {
+		log.Printf("Failed to initialize Redis service for cached routes: %v", err)
+		log.Printf("Cached routes will not be available. Check Redis configuration.")
 		// Log error but don't fail - cached routes won't be available
 		return
 	}

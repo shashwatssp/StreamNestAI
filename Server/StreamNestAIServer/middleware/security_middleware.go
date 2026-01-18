@@ -1,8 +1,6 @@
 package middleware
 
 import (
-	"crypto/rand"
-	"encoding/hex"
 	"fmt"
 	"net/http"
 	"regexp"
@@ -12,6 +10,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 	"github.com/golang-jwt/jwt/v5"
+	"github.com/shashwatssp/StreamNestAI/Server/StreamNestAIServer/security"
 	"github.com/shashwatssp/StreamNestAI/Server/StreamNestAIServer/utils"
 )
 
@@ -33,15 +32,17 @@ type SecurityConfig struct {
 
 // SecurityMiddleware provides security features
 type SecurityMiddleware struct {
-	config   SecurityConfig
-	validate *validator.Validate
+	config          SecurityConfig
+	validate        *validator.Validate
+	securityService *security.SecurityService
 }
 
 // NewSecurityMiddleware creates a new security middleware
-func NewSecurityMiddleware(config SecurityConfig) *SecurityMiddleware {
+func NewSecurityMiddleware(config SecurityConfig, securityService *security.SecurityService) *SecurityMiddleware {
 	return &SecurityMiddleware{
-		config:   config,
-		validate: validator.New(),
+		config:          config,
+		validate:        validator.New(),
+		securityService: securityService,
 	}
 }
 
@@ -66,16 +67,29 @@ func (sm *SecurityMiddleware) CSRFProtection() gin.HandlerFunc {
 			csrfToken = c.PostForm("_csrf")
 		}
 
-		// Get stored CSRF token from session
-		storedToken, exists := c.Get("csrf_token")
-		if !exists || storedToken == nil {
-			c.JSON(http.StatusForbidden, gin.H{"error": "CSRF token not found"})
+		// Get user ID from context (should be set by auth middleware)
+		userID, exists := c.Get("user_id")
+		if !exists {
+			c.JSON(http.StatusUnauthorized, gin.H{"error": "User not authenticated"})
 			c.Abort()
 			return
 		}
 
-		// Validate CSRF token
-		if csrfToken != storedToken.(string) {
+		// Validate CSRF token using security service
+		if sm.securityService == nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Security service not available"})
+			c.Abort()
+			return
+		}
+
+		userIDStr, ok := userID.(string)
+		if !ok {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Invalid user ID format"})
+			c.Abort()
+			return
+		}
+
+		if !sm.securityService.ValidateCSRFToken(csrfToken, userIDStr) {
 			c.JSON(http.StatusForbidden, gin.H{"error": "Invalid CSRF token"})
 			c.Abort()
 			return
@@ -94,16 +108,35 @@ func (sm *SecurityMiddleware) GenerateCSRFToken() gin.HandlerFunc {
 	}
 
 	return func(c *gin.Context) {
-		// Generate new CSRF token
-		token := make([]byte, sm.config.CSRFTokenLength)
-		_, err := rand.Read(token)
+		// Only generate CSRF token for authenticated users
+		userID, exists := c.Get("user_id")
+		if !exists {
+			c.Next()
+			return
+		}
+
+		// Generate new CSRF token using security service
+		if sm.securityService == nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Security service not available"})
+			c.Abort()
+			return
+		}
+
+		userIDStr, ok := userID.(string)
+		if !ok {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Invalid user ID format"})
+			c.Abort()
+			return
+		}
+
+		csrfToken, err := sm.securityService.GenerateCSRFToken(userIDStr)
 		if err != nil {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to generate CSRF token"})
 			c.Abort()
 			return
 		}
 
-		csrfToken := hex.EncodeToString(token)
+		// Set CSRF token in context for validation
 		c.Set("csrf_token", csrfToken)
 
 		// Set CSRF token in header for GET requests

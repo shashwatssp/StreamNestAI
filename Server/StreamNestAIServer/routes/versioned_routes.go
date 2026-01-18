@@ -94,17 +94,18 @@ func setupV1PublicRoutes(v1 *gin.RouterGroup, sc *ServiceContainer) {
 
 	// Authentication
 	v1.POST("/register", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "v1 registration",
+		c.JSON(http.StatusNotImplemented, gin.H{
+			"error":   "v1 registration endpoint not implemented",
+			"message": "Please use v2 API endpoint: /api/v2/register",
 			"version": "v1",
 		})
 	})
 
 	v1.POST("/login", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "v1 login",
+		c.JSON(http.StatusNotImplemented, gin.H{
+			"error":   "v1 login endpoint not implemented",
+			"message": "Please use v2 API endpoint: /api/v2/login",
 			"version": "v1",
-			"token":   "v1_token_example",
 		})
 	})
 }

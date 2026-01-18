@@ -63,21 +63,23 @@ func setupEnhancedPublicRoutes(router *gin.Engine, sc *ServiceContainer) {
 		}
 	})
 
-	// WebSocket endpoint
+	// WebSocket endpoint - protected with authentication middleware
 	if sc.WebSocketHub != nil {
-		router.GET("/ws", func(c *gin.Context) {
-			// Extract user information from query parameters
-			userID := c.Query("user_id")
-			username := c.Query("username")
+		protectedWS := router.Group("/ws")
+		protectedWS.Use(middleware.AuthMiddleWare())
+		{
+			protectedWS.GET("", func(c *gin.Context) {
+				// Extract authenticated user information from context (set by auth middleware)
+				userID := c.GetString("user_id")
+				if userID == "" {
+					c.JSON(http.StatusUnauthorized, gin.H{"error": "User not authenticated"})
+					return
+				}
 
-			if userID == "" || username == "" {
-				c.JSON(http.StatusBadRequest, gin.H{"error": "user_id and username are required as query parameters"})
-				return
-			}
-
-			// Use the existing WebSocket hub to handle the connection
-			websocket.HandleWebSocketConnection(sc.WebSocketHub, c)
-		})
+				// Use the existing WebSocket hub to handle the connection
+				websocket.HandleWebSocketConnection(sc.WebSocketHub, c)
+			})
+		}
 	} else {
 		router.GET("/ws", func(c *gin.Context) {
 			c.JSON(http.StatusServiceUnavailable, gin.H{"error": "WebSocket service unavailable"})

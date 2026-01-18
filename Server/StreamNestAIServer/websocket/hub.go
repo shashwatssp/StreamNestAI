@@ -63,6 +63,9 @@ type Hub struct {
 	// Rooms
 	rooms map[string]*Room
 
+	// Mutex for protecting concurrent access to clients and rooms
+	mu sync.RWMutex
+
 	// Inbound messages from the clients
 	broadcast chan Message
 
@@ -167,7 +170,10 @@ func (h *Hub) Run() {
 
 // registerClient adds a new client to the hub
 func (h *Hub) registerClient(client *Client) {
+	h.mu.Lock()
 	h.clients[client.ID] = client
+	h.mu.Unlock()
+
 	client.LastSeen = time.Now()
 
 	if h.config.EnableMetrics {
@@ -189,13 +195,19 @@ func (h *Hub) registerClient(client *Client) {
 	case client.Send <- welcome:
 	default:
 		close(client.Send)
+		h.mu.Lock()
 		delete(h.clients, client.ID)
+		h.mu.Unlock()
 	}
 }
 
 // unregisterClient removes a client from the hub
 func (h *Hub) unregisterClient(client *Client) {
-	if _, ok := h.clients[client.ID]; !ok {
+	h.mu.RLock()
+	_, exists := h.clients[client.ID]
+	h.mu.RUnlock()
+
+	if !exists {
 		return
 	}
 
@@ -208,7 +220,9 @@ func (h *Hub) unregisterClient(client *Client) {
 
 	// Close connection
 	close(client.Send)
+	h.mu.Lock()
 	delete(h.clients, client.ID)
+	h.mu.Unlock()
 
 	if h.config.EnableMetrics {
 		h.metrics.incrementConnectionsClosed()
@@ -252,7 +266,10 @@ func (h *Hub) handleMessage(message Message) {
 
 // handleJoinMessage handles join room messages
 func (h *Hub) handleJoinMessage(message Message) {
+	h.mu.RLock()
 	client, ok := h.clients[message.UserID]
+	h.mu.RUnlock()
+
 	if !ok {
 		return
 	}
@@ -267,7 +284,10 @@ func (h *Hub) handleJoinMessage(message Message) {
 
 // handleLeaveMessage handles leave room messages
 func (h *Hub) handleLeaveMessage(message Message) {
+	h.mu.RLock()
 	client, ok := h.clients[message.UserID]
+	h.mu.RUnlock()
+
 	if !ok {
 		return
 	}
@@ -315,7 +335,10 @@ func (h *Hub) handleNotificationMessage(message Message) {
 	}
 
 	// Otherwise broadcast to all user's rooms
+	h.mu.RLock()
 	client, ok := h.clients[message.UserID]
+	h.mu.RUnlock()
+
 	if !ok {
 		return
 	}
@@ -340,7 +363,10 @@ func (h *Hub) handleTypingMessage(message Message) {
 
 // handleHeartbeatMessage handles heartbeat messages
 func (h *Hub) handleHeartbeatMessage(message Message) {
+	h.mu.RLock()
 	client, ok := h.clients[message.UserID]
+	h.mu.RUnlock()
+
 	if !ok {
 		return
 	}
@@ -366,6 +392,7 @@ func (h *Hub) handleHeartbeatMessage(message Message) {
 // joinRoom adds a client to a room
 func (h *Hub) joinRoom(client *Client, roomID string) {
 	// Get or create room
+	h.mu.Lock()
 	room, ok := h.rooms[roomID]
 	if !ok {
 		room = &Room{
@@ -376,6 +403,7 @@ func (h *Hub) joinRoom(client *Client, roomID string) {
 		}
 		h.rooms[roomID] = room
 	}
+	h.mu.Unlock()
 
 	// Add client to room
 	room.mu.Lock()
@@ -423,7 +451,10 @@ func (h *Hub) joinRoom(client *Client, roomID string) {
 
 // leaveRoom removes a client from a room
 func (h *Hub) leaveRoom(client *Client, roomID string) {
+	h.mu.RLock()
 	room, ok := h.rooms[roomID]
+	h.mu.RUnlock()
+
 	if !ok {
 		return
 	}
@@ -441,7 +472,9 @@ func (h *Hub) leaveRoom(client *Client, roomID string) {
 
 	// Delete room if empty
 	if isEmpty {
+		h.mu.Lock()
 		delete(h.rooms, roomID)
+		h.mu.Unlock()
 	} else {
 		// Broadcast leave message
 		leaveMsg := Message{
@@ -461,7 +494,10 @@ func (h *Hub) leaveRoom(client *Client, roomID string) {
 
 // broadcastToRoom sends a message to all clients in a room
 func (h *Hub) broadcastToRoom(roomID string, message Message) {
+	h.mu.RLock()
 	room, ok := h.rooms[roomID]
+	h.mu.RUnlock()
+
 	if !ok {
 		return
 	}
@@ -478,14 +514,19 @@ func (h *Hub) broadcastToRoom(roomID string, message Message) {
 		default:
 			// Client channel is blocked, close it
 			close(client.Send)
+			h.mu.Lock()
 			delete(h.clients, client.ID)
+			h.mu.Unlock()
 		}
 	}
 }
 
 // broadcastToRoomExcluding sends a message to all clients in a room except one
 func (h *Hub) broadcastToRoomExcluding(roomID string, message Message, excludeUserID string) {
+	h.mu.RLock()
 	room, ok := h.rooms[roomID]
+	h.mu.RUnlock()
+
 	if !ok {
 		return
 	}
@@ -506,14 +547,19 @@ func (h *Hub) broadcastToRoomExcluding(roomID string, message Message, excludeUs
 		default:
 			// Client channel is blocked, close it
 			close(client.Send)
+			h.mu.Lock()
 			delete(h.clients, client.ID)
+			h.mu.Unlock()
 		}
 	}
 }
 
 // sendToUser sends a message to a specific user
 func (h *Hub) sendToUser(userID string, message Message) {
+	h.mu.RLock()
 	client, ok := h.clients[userID]
+	h.mu.RUnlock()
+
 	if !ok {
 		return
 	}
@@ -526,13 +572,18 @@ func (h *Hub) sendToUser(userID string, message Message) {
 	default:
 		// Client channel is blocked, close it
 		close(client.Send)
+		h.mu.Lock()
 		delete(h.clients, client.ID)
+		h.mu.Unlock()
 	}
 }
 
 // GetRoomInfo returns information about a room
 func (h *Hub) GetRoomInfo(roomID string) map[string]interface{} {
+	h.mu.RLock()
 	room, ok := h.rooms[roomID]
+	h.mu.RUnlock()
+
 	if !ok {
 		return nil
 	}
@@ -596,9 +647,16 @@ func (h *Hub) cleanupInactiveClients() {
 	now := time.Now()
 	timeout := 10 * time.Minute
 
-	for id, client := range h.clients {
+	h.mu.RLock()
+	clientsToCheck := make([]*Client, 0, len(h.clients))
+	for _, client := range h.clients {
+		clientsToCheck = append(clientsToCheck, client)
+	}
+	h.mu.RUnlock()
+
+	for _, client := range clientsToCheck {
 		if now.Sub(client.LastSeen) > timeout {
-			log.Printf("Removing inactive client: %s", id)
+			log.Printf("Removing inactive client: %s", client.ID)
 			h.unregisterClient(client)
 		}
 	}
@@ -606,13 +664,22 @@ func (h *Hub) cleanupInactiveClients() {
 
 // cleanupEmptyRooms removes empty rooms
 func (h *Hub) cleanupEmptyRooms() {
+	h.mu.RLock()
+	roomsToCheck := make(map[string]*Room)
 	for id, room := range h.rooms {
+		roomsToCheck[id] = room
+	}
+	h.mu.RUnlock()
+
+	for id, room := range roomsToCheck {
 		room.mu.RLock()
 		isEmpty := len(room.Clients) == 0
 		room.mu.RUnlock()
 
 		if isEmpty {
+			h.mu.Lock()
 			delete(h.rooms, id)
+			h.mu.Unlock()
 			log.Printf("Removed empty room: %s", id)
 		}
 	}
@@ -626,9 +693,14 @@ func (h *Hub) collectMetrics() {
 	for {
 		select {
 		case <-ticker.C:
+			h.mu.RLock()
+			clientCount := len(h.clients)
+			roomCount := len(h.rooms)
+			h.mu.RUnlock()
+
 			h.metrics.mu.Lock()
-			h.metrics.ConnectedClients = int64(len(h.clients))
-			h.metrics.ActiveRooms = int64(len(h.rooms))
+			h.metrics.ConnectedClients = int64(clientCount)
+			h.metrics.ActiveRooms = int64(roomCount)
 			h.metrics.mu.Unlock()
 		case <-h.ctx.Done():
 			return
@@ -641,7 +713,14 @@ func (h *Hub) shutdown() {
 	log.Println("Shutting down WebSocket hub...")
 
 	// Close all client connections
+	h.mu.RLock()
+	clients := make([]*Client, 0, len(h.clients))
 	for _, client := range h.clients {
+		clients = append(clients, client)
+	}
+	h.mu.RUnlock()
+
+	for _, client := range clients {
 		close(client.Send)
 		client.Conn.Close()
 	}

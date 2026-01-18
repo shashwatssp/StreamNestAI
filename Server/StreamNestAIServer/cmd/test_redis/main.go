@@ -4,6 +4,8 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"os"
+	"strconv"
 	"strings"
 	"time"
 
@@ -11,10 +13,30 @@ import (
 )
 
 func main() {
-	// Redis configuration from main.go
-	redisAddr := "redis-13554.crce182.ap-south-1-1.ec2.cloud.redislabs.com:13554"
-	redisPassword := "HWg60QKmrYFlWmrf3pr0Utv8IC5eU8QG"
-	redisDB := 0
+	// Redis configuration from environment variables
+	redisAddr := os.Getenv("REDIS_ADDR")
+	redisPassword := os.Getenv("REDIS_PASSWORD")
+	redisDBStr := os.Getenv("REDIS_DB")
+
+	// Validate required environment variables
+	if redisAddr == "" {
+		log.Fatalf("❌ REDIS_ADDR environment variable is required")
+	}
+	if redisPassword == "" {
+		log.Fatalf("❌ REDIS_PASSWORD environment variable is required")
+	}
+	if redisDBStr == "" {
+		log.Fatalf("❌ REDIS_DB environment variable is required")
+	}
+
+	// Parse Redis DB number
+	redisDB, err := strconv.Atoi(redisDBStr)
+	if err != nil {
+		log.Fatalf("❌ Invalid REDIS_DB value: %v (must be an integer)", err)
+	}
+	if redisDB < 0 {
+		log.Fatalf("❌ REDIS_DB must be a non-negative integer, got: %d", redisDB)
+	}
 
 	fmt.Println("🔍 Testing Redis Connection...")
 	fmt.Printf("📍 Redis Address: %s\n", redisAddr)

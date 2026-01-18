@@ -52,12 +52,21 @@ const UserProfile = () => {
 
   const handleFollow = async () => {
     try {
-      const endpoint = isFollowing ? 'unfollow' : 'follow';
-      await axios.post(`/api/v1/social/users/${userId}/${endpoint}`, {}, {
-        headers: {
-          'Authorization': `Bearer ${auth.token}`
-        }
-      });
+      if (isFollowing) {
+        // Unfollow - use DELETE method
+        await axios.delete(`/api/v2/follow/${userId}`, {
+          headers: {
+            'Authorization': `Bearer ${auth.token}`
+          }
+        });
+      } else {
+        // Follow - use POST method
+        await axios.post(`/api/v2/follow/${userId}`, {}, {
+          headers: {
+            'Authorization': `Bearer ${auth.token}`
+          }
+        });
+      }
       setIsFollowing(!isFollowing);
       fetchUserStats(); // Refresh stats
     } catch (err) {

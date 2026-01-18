@@ -49,11 +49,20 @@ export function setup() {
     headers: { 'Content-Type': 'application/json' },
   });
   
-  if (loginResponse.status === 200) {
-    const loginData = JSON.parse(loginResponse.body);
-    authToken = loginData.token;
-    console.log('Authentication successful for Redis stress test');
+  // Validate login response
+  if (loginResponse.status !== 200) {
+    throw new Error(`Login failed with status ${loginResponse.status}: ${loginResponse.body}`);
   }
+  
+  const loginData = JSON.parse(loginResponse.body);
+  
+  // Validate token is present
+  if (!loginData.token) {
+    throw new Error('Login response missing token');
+  }
+  
+  authToken = loginData.token;
+  console.log('Authentication successful for Redis stress test');
   
   return { authToken };
 }

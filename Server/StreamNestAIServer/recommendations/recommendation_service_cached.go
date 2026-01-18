@@ -317,8 +317,19 @@ func (crs *CachedRecommendationService) getContentBasedRecommendationsWithCache(
 	recommendations = make([]Recommendation, 0)
 
 	// Get movies based on preferred genres
+	// Guard against division by zero when PreferredGenres is empty
+	if len(prefs.PreferredGenres) == 0 {
+		log.Printf("DEBUG: User %s has no preferred genres, returning empty recommendations", prefs.UserID)
+		return recommendations, nil
+	}
+
+	perGenreLimit := limit / len(prefs.PreferredGenres)
+	if perGenreLimit < 1 {
+		perGenreLimit = 1 // Ensure at least 1 movie per genre
+	}
+
 	for _, genre := range prefs.PreferredGenres {
-		movies, err := crs.getMoviesByGenre(ctx, genre, limit/len(prefs.PreferredGenres))
+		movies, err := crs.getMoviesByGenre(ctx, genre, perGenreLimit)
 		if err != nil {
 			continue
 		}

@@ -8,7 +8,6 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/shashwatssp/StreamNestAI/Server/StreamNestAIServer/cache"
-	"github.com/shashwatssp/StreamNestAI/Server/StreamNestAIServer/middleware"
 	"github.com/shashwatssp/StreamNestAI/Server/StreamNestAIServer/recommendations"
 	"go.mongodb.org/mongo-driver/v2/mongo"
 )
@@ -290,31 +289,4 @@ func (crc *CachedRecommendationController) GetRecommendationCacheStats(c *gin.Co
 		"service":      "recommendations",
 		"generated_at": time.Now().Format(time.RFC3339),
 	})
-}
-
-// SetupCachedRecommendationRoutes sets up the cached recommendation routes
-func SetupCachedRecommendationRoutes(router *gin.Engine, client *mongo.Client, redisService *cache.RedisService) {
-	log.Printf("INFO: Setting up cached recommendation routes")
-
-	// Create cached recommendation controller
-	cachedRecController := NewCachedRecommendationController(client, redisService)
-
-	// Create auth middleware
-	authMiddleware := middleware.AuthMiddleWare()
-
-	// Cached recommendation routes group
-	cachedRecRoutes := router.Group("/api/v1/recommendations-cached")
-	{
-		// Authenticated routes
-		cachedRecRoutes.Use(authMiddleware)
-		{
-			cachedRecRoutes.GET("/recommended", cachedRecController.GetRecommendedMoviesWithCache)
-			cachedRecRoutes.GET("/trending", cachedRecController.GetTrendingContentWithCache)
-			cachedRecRoutes.GET("/feed", cachedRecController.GetPersonalizedFeedWithCache)
-			cachedRecRoutes.DELETE("/cache", cachedRecController.InvalidateUserRecommendationCache)
-			cachedRecRoutes.GET("/cache/stats", cachedRecController.GetRecommendationCacheStats)
-		}
-	}
-
-	log.Printf("SUCCESS: Cached recommendation routes configured at /api/v1/recommendations-cached")
 }

@@ -449,6 +449,38 @@ func (ss *SocialService) RemoveFromWatchlist(watchlistID, contentID string) erro
 	return err
 }
 
+// IsWatchlistOwner checks if a user is the owner of a watchlist
+func (ss *SocialService) IsWatchlistOwner(watchlistID, userID string) (bool, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+
+	coll := ss.db.Collection("watchlists")
+	var watchlist Watchlist
+
+	err := coll.FindOne(ctx, bson.M{"_id": watchlistID}).Decode(&watchlist)
+	if err != nil {
+		return false, err
+	}
+
+	return watchlist.CreatorID == userID, nil
+}
+
+// GetWatchlistByID retrieves a watchlist by ID
+func (ss *SocialService) GetWatchlistByID(watchlistID string) (*Watchlist, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+
+	coll := ss.db.Collection("watchlists")
+	var watchlist Watchlist
+
+	err := coll.FindOne(ctx, bson.M{"_id": watchlistID}).Decode(&watchlist)
+	if err != nil {
+		return nil, err
+	}
+
+	return &watchlist, nil
+}
+
 // Helper functions
 
 func (ss *SocialService) updateFollowCounts(followerID, followingID string) {

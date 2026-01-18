@@ -235,8 +235,19 @@ func (rs *RecommendationService) getContentBasedRecommendations(ctx context.Cont
 	recommendations := make([]Recommendation, 0)
 
 	// Get movies based on preferred genres
+	// Guard against division by zero when PreferredGenres is empty
+	if len(prefs.PreferredGenres) == 0 {
+		log.Printf("DEBUG: User %s has no preferred genres, returning empty recommendations", prefs.UserID)
+		return recommendations, nil
+	}
+
+	perGenreLimit := limit / len(prefs.PreferredGenres)
+	if perGenreLimit < 1 {
+		perGenreLimit = 1 // Ensure at least 1 movie per genre
+	}
+
 	for _, genre := range prefs.PreferredGenres {
-		movies, err := rs.getMoviesByGenre(ctx, genre, limit/len(prefs.PreferredGenres))
+		movies, err := rs.getMoviesByGenre(ctx, genre, perGenreLimit)
 		if err != nil {
 			continue
 		}
@@ -329,7 +340,15 @@ func (rs *RecommendationService) UpdateUserPreferences(userID string, event map[
 	}
 
 	if rating, ok := event["rating"].(float64); ok {
-		update["$avg"] = bson.M{"average_rating": rating}
+		// Fix: Replace invalid "$avg" operator with proper average calculation
+		// We need to maintain total_rating and rating_count fields to compute averages
+		update["$inc"] = bson.M{
+			"total_rating": rating,
+			"rating_count": 1,
+		}
+		update["$set"] = bson.M{
+			"average_rating": bson.M{"$divide": []interface{}{"$total_rating", "$rating_count"}},
+		}
 	}
 
 	_, err := coll.UpdateOne(

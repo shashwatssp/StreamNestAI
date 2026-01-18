@@ -14,69 +14,87 @@ export const useWebSocket = () => {
   const [userStatuses, setUserStatuses] = useState({});
   const [recommendations, setRecommendations] = useState([]);
 
+  // Create stable handler functions using useCallback
+  const onConnected = useCallback(() => {
+    setIsConnected(true);
+    setConnectionState('CONNECTED');
+    
+    // Subscribe to user-specific channels if authenticated
+    if (auth?.user?._id) {
+      wsRef.current.subscribeToNotifications(auth.user._id);
+      wsRef.current.subscribeToRecommendations(auth.user._id);
+    }
+  }, [auth?.user?._id]);
+
+  const onDisconnected = useCallback(() => {
+    setIsConnected(false);
+    setConnectionState('DISCONNECTED');
+  }, []);
+
+  const onError = useCallback((error) => {
+    console.error('WebSocket error:', error);
+    setConnectionState('ERROR');
+  }, []);
+
+  const onNotification = useCallback((notification) => {
+    setNotifications(prev => [notification, ...prev]);
+    if (!notification.read) {
+      setUnreadCount(prev => prev + 1);
+    }
+  }, []);
+
+  const onWatchPartyUpdate = useCallback((update) => {
+    setWatchPartyState(update);
+  }, []);
+
+  const onChatMessage = useCallback((message) => {
+    setChatMessages(prev => [...prev, message]);
+  }, []);
+
+  const onUserStatus = useCallback((status) => {
+    setUserStatuses(prev => ({
+      ...prev,
+      [status.userId]: status
+    }));
+  }, []);
+
+  const onRecommendationUpdate = useCallback((recommendationData) => {
+    setRecommendations(recommendationData.recommendations || []);
+  }, []);
+
   // Initialize WebSocket service
   useEffect(() => {
     wsRef.current = WebSocketService.getInstance();
     
-    // Set up event listeners
+    // Set up event listeners with stable callback references
     const setupEventListeners = () => {
-      wsRef.current.on('connected', () => {
-        setIsConnected(true);
-        setConnectionState('CONNECTED');
-        
-        // Subscribe to user-specific channels if authenticated
-        if (auth?.user?._id) {
-          wsRef.current.subscribeToNotifications(auth.user._id);
-          wsRef.current.subscribeToRecommendations(auth.user._id);
-        }
-      });
-
-      wsRef.current.on('disconnected', () => {
-        setIsConnected(false);
-        setConnectionState('DISCONNECTED');
-      });
-
-      wsRef.current.on('error', (error) => {
-        console.error('WebSocket error:', error);
-        setConnectionState('ERROR');
-      });
-
-      wsRef.current.on('notification', (notification) => {
-        setNotifications(prev => [notification, ...prev]);
-        if (!notification.read) {
-          setUnreadCount(prev => prev + 1);
-        }
-      });
-
-      wsRef.current.on('watchPartyUpdate', (update) => {
-        setWatchPartyState(update);
-      });
-
-      wsRef.current.on('chatMessage', (message) => {
-        setChatMessages(prev => [...prev, message]);
-      });
-
-      wsRef.current.on('userStatus', (status) => {
-        setUserStatuses(prev => ({
-          ...prev,
-          [status.userId]: status
-        }));
-      });
-
-      wsRef.current.on('recommendationUpdate', (recommendationData) => {
-        setRecommendations(recommendationData.recommendations || []);
-      });
+      wsRef.current.on('connected', onConnected);
+      wsRef.current.on('disconnected', onDisconnected);
+      wsRef.current.on('error', onError);
+      wsRef.current.on('notification', onNotification);
+      wsRef.current.on('watchPartyUpdate', onWatchPartyUpdate);
+      wsRef.current.on('chatMessage', onChatMessage);
+      wsRef.current.on('userStatus', onUserStatus);
+      wsRef.current.on('recommendationUpdate', onRecommendationUpdate);
     };
 
     setupEventListeners();
 
     return () => {
-      // Cleanup event listeners
+      // Cleanup event listeners by removing the same callback references
       if (wsRef.current) {
+        wsRef.current.off('connected', onConnected);
+        wsRef.current.off('disconnected', onDisconnected);
+        wsRef.current.off('error', onError);
+        wsRef.current.off('notification', onNotification);
+        wsRef.current.off('watchPartyUpdate', onWatchPartyUpdate);
+        wsRef.current.off('chatMessage', onChatMessage);
+        wsRef.current.off('userStatus', onUserStatus);
+        wsRef.current.off('recommendationUpdate', onRecommendationUpdate);
         wsRef.current.disconnect();
       }
     };
-  }, [auth]);
+  }, [onConnected, onDisconnected, onError, onNotification, onWatchPartyUpdate, onChatMessage, onUserStatus, onRecommendationUpdate]);
 
   // Connect to WebSocket when auth changes
   useEffect(() => {

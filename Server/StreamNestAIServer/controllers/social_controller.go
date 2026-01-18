@@ -385,6 +385,13 @@ func (sc *SocialController) GetUserWatchlists(c *gin.Context) {
 
 // AddToWatchlist handles POST /api/v1/social/watchlist/:watchlistId/add
 func (sc *SocialController) AddToWatchlist(c *gin.Context) {
+	// Get authenticated user ID
+	userID, exists := c.Get("user_id")
+	if !exists {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "User not authenticated"})
+		return
+	}
+
 	watchlistID := c.Param("watchlistId")
 	if watchlistID == "" {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Watchlist ID is required"})
@@ -400,7 +407,18 @@ func (sc *SocialController) AddToWatchlist(c *gin.Context) {
 		return
 	}
 
-	err := sc.socialService.AddToWatchlist(watchlistID, request.ContentID)
+	// Check if user owns the watchlist
+	isOwner, err := sc.socialService.IsWatchlistOwner(watchlistID, userID.(string))
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to verify watchlist ownership: " + err.Error()})
+		return
+	}
+	if !isOwner {
+		c.JSON(http.StatusForbidden, gin.H{"error": "You don't have permission to modify this watchlist"})
+		return
+	}
+
+	err = sc.socialService.AddToWatchlist(watchlistID, request.ContentID)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to add to watchlist: " + err.Error()})
 		return
@@ -415,6 +433,13 @@ func (sc *SocialController) AddToWatchlist(c *gin.Context) {
 
 // RemoveFromWatchlist handles DELETE /api/v1/social/watchlist/:watchlistId/remove/:contentId
 func (sc *SocialController) RemoveFromWatchlist(c *gin.Context) {
+	// Get authenticated user ID
+	userID, exists := c.Get("user_id")
+	if !exists {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "User not authenticated"})
+		return
+	}
+
 	watchlistID := c.Param("watchlistId")
 	contentID := c.Param("contentId")
 
@@ -423,7 +448,18 @@ func (sc *SocialController) RemoveFromWatchlist(c *gin.Context) {
 		return
 	}
 
-	err := sc.socialService.RemoveFromWatchlist(watchlistID, contentID)
+	// Check if user owns the watchlist
+	isOwner, err := sc.socialService.IsWatchlistOwner(watchlistID, userID.(string))
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to verify watchlist ownership: " + err.Error()})
+		return
+	}
+	if !isOwner {
+		c.JSON(http.StatusForbidden, gin.H{"error": "You don't have permission to modify this watchlist"})
+		return
+	}
+
+	err = sc.socialService.RemoveFromWatchlist(watchlistID, contentID)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to remove from watchlist: " + err.Error()})
 		return

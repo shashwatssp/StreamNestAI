@@ -205,6 +205,16 @@ type RateLimiter struct {
 
 // NewRateLimiter creates a new rate limiter middleware
 func NewRateLimiter(config RateLimiterConfig) (*RateLimiter, error) {
+	// Validate RequestsPerSecond to prevent division by zero
+	if config.RequestsPerSecond <= 0 {
+		return nil, fmt.Errorf("RequestsPerSecond must be greater than 0, got %d", config.RequestsPerSecond)
+	}
+
+	// Validate BurstSize
+	if config.BurstSize <= 0 {
+		config.BurstSize = config.RequestsPerSecond // Set default burst size
+	}
+
 	rl := &RateLimiter{
 		config:        config,
 		localBuckets:  make(map[string]*TokenBucket),
@@ -403,9 +413,18 @@ func CompositeKeyGenerator(sources ...func(*gin.Context) string) func(*gin.Conte
 
 // APIRateLimit returns a rate limiter for API endpoints
 func APIRateLimit(requestsPerMinute int) (*RateLimiter, error) {
+	if requestsPerMinute <= 0 {
+		return nil, fmt.Errorf("requestsPerMinute must be greater than 0, got %d", requestsPerMinute)
+	}
+
+	requestsPerSecond := requestsPerMinute / 60
+	if requestsPerSecond <= 0 {
+		requestsPerSecond = 1 // Ensure at least 1 request per second
+	}
+
 	return NewRateLimiter(RateLimiterConfig{
-		RequestsPerSecond: requestsPerMinute / 60,
-		BurstSize:         requestsPerMinute / 30,
+		RequestsPerSecond: requestsPerSecond,
+		BurstSize:         max(requestsPerSecond, requestsPerMinute/30),
 		WindowDuration:    time.Minute,
 		KeyGenerator:      APIKeyGenerator,
 	})
@@ -413,9 +432,18 @@ func APIRateLimit(requestsPerMinute int) (*RateLimiter, error) {
 
 // UserRateLimit returns a rate limiter for user-specific endpoints
 func UserRateLimit(requestsPerMinute int) (*RateLimiter, error) {
+	if requestsPerMinute <= 0 {
+		return nil, fmt.Errorf("requestsPerMinute must be greater than 0, got %d", requestsPerMinute)
+	}
+
+	requestsPerSecond := requestsPerMinute / 60
+	if requestsPerSecond <= 0 {
+		requestsPerSecond = 1 // Ensure at least 1 request per second
+	}
+
 	return NewRateLimiter(RateLimiterConfig{
-		RequestsPerSecond: requestsPerMinute / 60,
-		BurstSize:         requestsPerMinute / 30,
+		RequestsPerSecond: requestsPerSecond,
+		BurstSize:         max(requestsPerSecond, requestsPerMinute/30),
 		WindowDuration:    time.Minute,
 		KeyGenerator:      UserKeyGenerator,
 	})
@@ -423,6 +451,10 @@ func UserRateLimit(requestsPerMinute int) (*RateLimiter, error) {
 
 // GlobalRateLimit returns a global rate limiter
 func GlobalRateLimit(requestsPerSecond int) (*RateLimiter, error) {
+	if requestsPerSecond <= 0 {
+		return nil, fmt.Errorf("requestsPerSecond must be greater than 0, got %d", requestsPerSecond)
+	}
+
 	return NewRateLimiter(RateLimiterConfig{
 		RequestsPerSecond: requestsPerSecond,
 		BurstSize:         requestsPerSecond * 2,
@@ -433,9 +465,18 @@ func GlobalRateLimit(requestsPerSecond int) (*RateLimiter, error) {
 
 // DistributedRateLimit returns a distributed rate limiter using Redis
 func DistributedRateLimit(redisHost, redisPort, redisPassword string, redisDB int, requestsPerMinute int) (*RateLimiter, error) {
+	if requestsPerMinute <= 0 {
+		return nil, fmt.Errorf("requestsPerMinute must be greater than 0, got %d", requestsPerMinute)
+	}
+
+	requestsPerSecond := requestsPerMinute / 60
+	if requestsPerSecond <= 0 {
+		requestsPerSecond = 1 // Ensure at least 1 request per second
+	}
+
 	return NewRateLimiter(RateLimiterConfig{
-		RequestsPerSecond: requestsPerMinute / 60,
-		BurstSize:         requestsPerMinute / 30,
+		RequestsPerSecond: requestsPerSecond,
+		BurstSize:         max(requestsPerSecond, requestsPerMinute/30),
 		WindowDuration:    time.Minute,
 		RedisHost:         redisHost,
 		RedisPort:         redisPort,

@@ -62,12 +62,25 @@ export function setup() {
     headers: { 'Content-Type': 'application/json' },
   });
   
-  if (loginResponse.status === 200) {
-    const loginData = JSON.parse(loginResponse.body);
-    authToken = loginData.token;
-    userId = loginData.user.id;
-    console.log('Authentication successful');
+  // Validate login response
+  if (loginResponse.status !== 200) {
+    throw new Error(`Login failed with status ${loginResponse.status}: ${loginResponse.body}`);
   }
+  
+  const loginData = JSON.parse(loginResponse.body);
+  
+  // Validate token and user ID are present
+  if (!loginData.token) {
+    throw new Error('Login response missing token');
+  }
+  
+  if (!loginData.user || !loginData.user.id) {
+    throw new Error('Login response missing user ID');
+  }
+  
+  authToken = loginData.token;
+  userId = loginData.user.id;
+  console.log('Authentication successful');
   
   return { authToken, userId };
 }

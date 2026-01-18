@@ -46,13 +46,17 @@ func (ws *WebSocketServer) Stop() {
 
 // HandleWebSocket handles WebSocket connection requests
 func (ws *WebSocketServer) HandleWebSocket(c *gin.Context) {
-	// Extract user information from JWT token or session
-	userID := c.Query("user_id")
-	username := c.Query("username")
-
-	if userID == "" || username == "" {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "user_id and username are required"})
+	// Extract authenticated user information from context (set by auth middleware)
+	userID := c.GetString("userID")
+	if userID == "" {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "authentication required"})
 		return
+	}
+
+	// Get username from context or user lookup - for now, use userID as fallback
+	username := c.GetString("username")
+	if username == "" {
+		username = userID // Fallback to userID if username not available
 	}
 
 	// Upgrade HTTP connection to WebSocket
@@ -176,8 +180,8 @@ func (c *Client) readPump(hub *Hub) {
 			break
 		}
 
-		// Set message metadata
-		message.UserID = c.ID
+		// Set message metadata using authenticated user identity
+		message.UserID = c.UserID
 		message.Username = c.Username
 		message.Timestamp = time.Now()
 
@@ -379,13 +383,17 @@ func (cs *ChatService) SendMessage(roomID, userID, username, content string) {
 
 // HandleWebSocketConnection handles WebSocket connection using an existing hub
 func HandleWebSocketConnection(hub *Hub, c *gin.Context) {
-	// Extract user information from query parameters
-	userID := c.Query("user_id")
-	username := c.Query("username")
-
-	if userID == "" || username == "" {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "user_id and username are required"})
+	// Extract authenticated user information from context (set by auth middleware)
+	userID := c.GetString("userID")
+	if userID == "" {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "authentication required"})
 		return
+	}
+
+	// Get username from context or user lookup - for now, use userID as fallback
+	username := c.GetString("username")
+	if username == "" {
+		username = userID // Fallback to userID if username not available
 	}
 
 	// Upgrade HTTP connection to WebSocket
