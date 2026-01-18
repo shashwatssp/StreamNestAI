@@ -30,24 +30,46 @@ var validate = validator.New()
 
 func GetMovies(client *mongo.Client) gin.HandlerFunc {
 	return func(c *gin.Context) {
+		log.Println("INFO: GetMovies endpoint called")
+		
 		ctx, cancel := context.WithTimeout(context.Background(), 100*time.Second)
 		defer cancel()
 
 		var movies []models.Movie
 
+		log.Println("INFO: Opening movies collection")
 		var movieCollection *mongo.Collection = database.OpenCollection("movies", client)
 
+		if movieCollection == nil {
+			log.Println("ERROR: Failed to open movies collection")
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed To Open Movies Collection"})
+			return
+		}
+
+		log.Println("INFO: Executing Find query on movies collection")
 		cursor, err := movieCollection.Find(ctx, bson.M{})
 
 		if err != nil {
+			log.Printf("ERROR: Failed to fetch movies from database: %v", err)
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed To Fetch Movies"})
+			return
 		}
 
 		defer cursor.Close(ctx)
 
+		log.Println("INFO: Decoding cursor results into movies slice")
 		if err = cursor.All(ctx, &movies); err != nil {
+			log.Printf("ERROR: Failed to decode movies: %v", err)
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed To Decode Movies"})
 			return
+		}
+
+		log.Printf("INFO: Successfully fetched %d movies from database", len(movies))
+		
+		if len(movies) == 0 {
+			log.Println("WARNING: No movies found in database - collection might be empty")
+		} else {
+			log.Printf("DEBUG: First movie title: %s", movies[0].Title)
 		}
 
 		c.JSON(http.StatusOK, movies)

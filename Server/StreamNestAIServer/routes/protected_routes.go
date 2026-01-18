@@ -8,9 +8,13 @@ import (
 )
 
 func SetupProtectedRoutes(router *gin.Engine, client *mongo.Client) {
-	router.Use(middleware.AuthMiddleWare())
-	router.GET("/movie/:imdb_id", controller.GetMovie(client))
-	router.POST("/addmovie", controller.AddMovie(client))
-	router.GET("/recommendedmovies", controller.GetRecommendedMovies(client))
-	router.PATCH("/updatereview/:imdb_id", controller.AdminReviewUpdate(client))
+	// Create a protected route group instead of applying middleware globally
+	protected := router.Group("/")
+	protected.Use(middleware.AuthMiddleWare())
+	{
+		protected.GET("/movie/:imdb_id", controller.GetMovie(client))
+		protected.POST("/addmovie", controller.AddMovie(client))
+		protected.GET("/recommendedmovies", controller.GetRecommendedMovies(client))
+		protected.PATCH("/updatereview/:imdb_id", controller.AdminReviewUpdate(client))
+	}
 }
