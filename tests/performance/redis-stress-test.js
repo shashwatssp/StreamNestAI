@@ -23,6 +23,27 @@ export let options = {
     redis_errors: ['rate<0.05'],      // Redis error rate under 5%
     cache_hits: ['rate>0.7'],         // Cache hit rate above 70%
   },
+  scenarios: {
+    redis_stress_test: {
+      executor: 'ramping-vus',
+      stages: [
+        { duration: '1m', target: 200 },  // Ramp up to 200 users
+        { duration: '3m', target: 200 },  // Stay at 200 users
+        { duration: '1m', target: 500 },  // Ramp up to 500 users
+        { duration: '3m', target: 500 },  // Stay at 500 users
+        { duration: '1m', target: 1000 }, // Ramp up to 1000 users
+        { duration: '3m', target: 1000 }, // Stay at 1000 users
+        { duration: '1m', target: 0 },    // Ramp down
+      ],
+      exec: 'default',
+    },
+    rate_limit_boundary_test: {
+      executor: 'constant-vus',
+      vus: 1,
+      duration: '30s',
+      exec: 'handleRateLimitBoundary',
+    },
+  },
 };
 
 const BASE_URL = 'http://localhost:8080';
@@ -168,12 +189,14 @@ export function teardown(data) {
 }
 
 // Custom function to test rate limiting boundaries
-export function handleRateLimitBoundary() {
+export function handleRateLimitBoundary(data) {
   const headers = {
     'Content-Type': 'application/json',
-    'Authorization': `Bearer ${authToken}`,
+    'Authorization': `Bearer ${data.authToken}`,
   };
 
+  console.log('Starting rate limit boundary test...');
+  
   // Send rapid requests to test rate limiting
   for (let i = 0; i < 150; i++) {
     let response = http.get(`${BASE_URL}/api/v2/movies`, { headers });
@@ -187,4 +210,6 @@ export function handleRateLimitBoundary() {
       break;
     }
   }
+  
+  console.log('Rate limit boundary test completed');
 }
