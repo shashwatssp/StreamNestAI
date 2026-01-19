@@ -81,27 +81,53 @@ func GetMovies(client *mongo.Client) gin.HandlerFunc {
 
 func GetMovie(client *mongo.Client) gin.HandlerFunc {
 	return func(c *gin.Context) {
+		startTime := time.Now()
+		log.Printf("INFO: GetMovie endpoint called at %s", startTime.Format(time.RFC3339))
+		
 		ctx, cancel := context.WithTimeout(context.Background(), 100*time.Second)
 		defer cancel()
 
 		movieID := c.Param("imdb_id")
+		log.Printf("INFO: Looking for movie with imdb_id: %s", movieID)
 
 		if movieID == "" {
+			log.Printf("ERROR: Movie ID is empty in request")
 			c.JSON(http.StatusBadRequest, gin.H{"error": "Movie ID is required"})
 			return
 		}
 
-		var movie models.Movie
+		log.Printf("INFO: Opening collection 'movies' from database 'StreamNest'")
 		var movieCollection *mongo.Collection = database.OpenCollection("movies", client)
+		
+		if movieCollection == nil {
+			log.Printf("ERROR: Failed to open movies collection")
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed To Open Movies Collection"})
+			return
+		}
+		
+		log.Printf("SUCCESS: Successfully opened collection 'movies'")
+		log.Printf("INFO: Executing FindOne query for imdb_id: %s", movieID)
+		
+		var movie models.Movie
 		err := movieCollection.FindOne(ctx, bson.M{"imdb_id": movieID}).Decode(&movie)
 
 		if err != nil {
-			c.JSON(http.StatusNotFound, gin.H{"error": "Movie Not Found"})
+			if err == mongo.ErrNoDocuments {
+				log.Printf("WARNING: Movie with imdb_id '%s' not found in database", movieID)
+				c.JSON(http.StatusNotFound, gin.H{"error": "Movie Not Found"})
+			} else {
+				log.Printf("ERROR: Database error while fetching movie: %v", err)
+				c.JSON(http.StatusInternalServerError, gin.H{"error": "Database Error"})
+			}
 			return
 		}
 
-		c.JSON(http.StatusOK, movie)
+		duration := time.Since(startTime)
+		log.Printf("INFO: Successfully found movie '%s' (imdb_id: %s) in %v", movie.Title, movieID, duration)
+		log.Printf("DEBUG: Movie details - Title: %s, Genres: %v, Ranking: %v",
+			movie.Title, movie.Genre, movie.Ranking)
 
+		c.JSON(http.StatusOK, movie)
 	}
 }
 
@@ -499,9 +525,14 @@ func GetGenres(client *mongo.Client) gin.HandlerFunc {
 
 func NaturalLanguageMovieSearch(client *mongo.Client) gin.HandlerFunc {
 	return func(c *gin.Context) {
+		startTime := time.Now()
+		log.Printf("INFO: NaturalLanguageMovieSearch endpoint called at %s", startTime.Format(time.RFC3339))
+		
 		query := c.Query("q")
+		log.Printf("INFO: Search query received: '%s'", query)
 
 		if query == "" {
+			log.Printf("ERROR: Empty search query provided")
 			c.JSON(http.StatusBadRequest, gin.H{"error": "Query parameter 'q' is required"})
 			return
 		}
@@ -513,6 +544,7 @@ func NaturalLanguageMovieSearch(client *mongo.Client) gin.HandlerFunc {
 		}
 
 		OpenAiApiKey := os.Getenv("OPENAI_API_KEY")
+		log.Printf("INFO: OpenAI API Key loaded: %t", OpenAiApiKey != "")
 
 		llm, err := openai.New(
 			openai.WithToken(OpenAiApiKey),
@@ -521,6 +553,7 @@ func NaturalLanguageMovieSearch(client *mongo.Client) gin.HandlerFunc {
 		)
 
 		if err != nil {
+			log.Printf("ERROR: Failed to initialize DeepSeek client: %v", err)
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to initialize AI"})
 			return
 		}
@@ -541,29 +574,46 @@ Examples:
 
 Return ONLY valid MongoDB filter JSON, no explanation:`, query)
 
+		log.Printf("INFO: Sending query to DeepSeek for processing: '%s'", query)
 		filterJSON, err := llm.Call(c, prompt)
 		if err != nil {
+			log.Printf("ERROR: DeepSeek API call failed: %v", err)
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "AI processing failed"})
 			return
 		}
 
+		log.Printf("INFO: DeepSeek response: '%s'", filterJSON)
+
 		// Parse the AI-generated filter
 		var filter bson.M
 		if err := json.Unmarshal([]byte(filterJSON), &filter); err != nil {
+			log.Printf("WARNING: Failed to parse AI filter JSON: %v, using fallback", err)
 			// Fallback: search by title if AI output is invalid
 			filter = bson.M{"title": bson.M{"$regex": query, "$options": "i"}}
+			log.Printf("INFO: Using fallback filter: %v", filter)
+		} else {
+			log.Printf("INFO: Successfully parsed AI filter: %v", filter)
 		}
 
 		var ctx, cancel = context.WithTimeout(c, 100*time.Second)
 		defer cancel()
 
+		log.Printf("INFO: Opening collection 'movies' from database 'StreamNest'")
 		var movieCollection *mongo.Collection = database.OpenCollection("movies", client)
+		
+		if movieCollection == nil {
+			log.Printf("ERROR: Failed to open movies collection")
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed To Open Movies Collection"})
+			return
+		}
 
 		// Limit results to 20
 		findOptions := options.Find().SetLimit(20)
+		log.Printf("INFO: Executing search with filter: %v", filter)
 
 		cursor, err := movieCollection.Find(ctx, filter, findOptions)
 		if err != nil {
+			log.Printf("ERROR: Database query failed: %v", err)
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Database query failed"})
 			return
 		}
@@ -571,8 +621,16 @@ Return ONLY valid MongoDB filter JSON, no explanation:`, query)
 
 		var movies []models.Movie
 		if err := cursor.All(ctx, &movies); err != nil {
+			log.Printf("ERROR: Failed to decode search results: %v", err)
 			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 			return
+		}
+
+		duration := time.Since(startTime)
+		log.Printf("INFO: Natural language search completed in %v, found %d results", duration, len(movies))
+		
+		if len(movies) > 0 {
+			log.Printf("DEBUG: First result: %s (imdb_id: %s)", movies[0].Title, movies[0].ImdbID)
 		}
 
 		c.JSON(http.StatusOK, movies)

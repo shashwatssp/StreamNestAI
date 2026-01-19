@@ -144,25 +144,44 @@ func (r *RedisService) generateKey(key string) string {
 
 // Set stores a value in Redis with TTL
 func (r *RedisService) Set(ctx context.Context, key string, value interface{}, ttl ...time.Duration) error {
+	startTime := time.Now()
 	duration := r.defaultTTL
 	if len(ttl) > 0 {
 		duration = ttl[0]
 	}
 
+	log.Printf("🗄️  CACHE SET START: key=%s, ttl=%s", key, duration.String())
+
 	// Serialize value
+	marshalStart := time.Now()
 	data, err := json.Marshal(value)
+	marshalTime := time.Since(marshalStart)
+
 	if err != nil {
+		log.Printf("❌ CACHE SET MARSHAL ERROR: key=%s, error=%v, marshal_time=%s", key, err, marshalTime.String())
 		return fmt.Errorf("failed to marshal value: %w", err)
 	}
 
+	log.Printf("✅ CACHE SET MARSHAL SUCCESS: key=%s, data_size=%d bytes, marshal_time=%s", key, len(data), marshalTime.String())
+
 	// Store in Redis
 	fullKey := r.generateKey(key)
+	setStart := time.Now()
 	err = r.client.Set(ctx, fullKey, data, duration).Err()
+	setTime := time.Since(setStart)
+	totalTime := time.Since(startTime)
+
 	if err != nil {
+		log.Printf("❌ CACHE SET ERROR: key=%s, full_key=%s, error=%v, set_time=%s, total_time=%s",
+			key, fullKey, err, setTime.String(), totalTime.String())
 		return fmt.Errorf("failed to set key %s: %w", key, err)
 	}
 
+	log.Printf("✅ CACHE SET SUCCESS: key=%s, full_key=%s, data_size=%d bytes, ttl=%s, set_time=%s, total_time=%s",
+		key, fullKey, len(data), duration.String(), setTime.String(), totalTime.String())
+
 	// Update metadata
+	metadataStart := time.Now()
 	metadata := CacheItem{
 		Key:         key,
 		Value:       value,
@@ -174,28 +193,55 @@ func (r *RedisService) Set(ctx context.Context, key string, value interface{}, t
 	metadataKey := r.generateKey(fmt.Sprintf("meta:%s", key))
 	metadataData, _ := json.Marshal(metadata)
 	r.client.Set(ctx, metadataKey, metadataData, duration)
+	metadataTime := time.Since(metadataStart)
+
+	log.Printf("📊 CACHE METADATA SET: key=%s, metadata_key=%s, metadata_time=%s",
+		key, metadataKey, metadataTime.String())
 
 	return nil
 }
 
 // Get retrieves a value from Redis
 func (r *RedisService) Get(ctx context.Context, key string, dest interface{}) error {
+	startTime := time.Now()
 	fullKey := r.generateKey(key)
 
+	log.Printf("🔍 CACHE GET START: key=%s, full_key=%s", key, fullKey)
+
 	// Get value
+	getStart := time.Now()
 	data, err := r.client.Get(ctx, fullKey).Result()
+	getTime := time.Since(getStart)
+
 	if err != nil {
+		totalTime := time.Since(startTime)
 		if err == redis.Nil {
+			log.Printf("⚠️  CACHE GET MISS: key=%s, full_key=%s, get_time=%s, total_time=%s",
+				key, fullKey, getTime.String(), totalTime.String())
 			return fmt.Errorf("key %s not found", key)
 		}
+		log.Printf("❌ CACHE GET ERROR: key=%s, full_key=%s, error=%v, get_time=%s, total_time=%s",
+			key, fullKey, err, getTime.String(), totalTime.String())
 		return fmt.Errorf("failed to get key %s: %w", key, err)
 	}
 
+	log.Printf("✅ CACHE GET HIT: key=%s, full_key=%s, data_size=%d bytes, get_time=%s",
+		key, fullKey, len(data), getTime.String())
+
 	// Deserialize value
+	unmarshalStart := time.Now()
 	err = json.Unmarshal([]byte(data), dest)
+	unmarshalTime := time.Since(unmarshalStart)
+	totalTime := time.Since(startTime)
+
 	if err != nil {
+		log.Printf("❌ CACHE GET UNMARSHAL ERROR: key=%s, error=%v, unmarshal_time=%s, total_time=%s",
+			key, err, unmarshalTime.String(), totalTime.String())
 		return fmt.Errorf("failed to unmarshal value for key %s: %w", key, err)
 	}
+
+	log.Printf("✅ CACHE GET SUCCESS: key=%s, data_size=%d bytes, get_time=%s, unmarshal_time=%s, total_time=%s",
+		key, len(data), getTime.String(), unmarshalTime.String(), totalTime.String())
 
 	// Update access count
 	go r.updateAccessCount(key)
@@ -234,17 +280,30 @@ func (r *RedisService) GetWithTTL(ctx context.Context, key string, dest interfac
 
 // Delete removes a key from Redis
 func (r *RedisService) Delete(ctx context.Context, key string) error {
+	startTime := time.Now()
 	fullKey := r.generateKey(key)
 	metadataKey := r.generateKey(fmt.Sprintf("meta:%s", key))
+
+	log.Printf("🗑️  CACHE DELETE START: key=%s, full_key=%s, metadata_key=%s", key, fullKey, metadataKey)
 
 	pipe := r.client.Pipeline()
 	pipe.Del(ctx, fullKey)
 	pipe.Del(ctx, metadataKey)
-	_, err := pipe.Exec(ctx)
+
+	deleteStart := time.Now()
+	result, err := pipe.Exec(ctx)
+	deleteTime := time.Since(deleteStart)
+	totalTime := time.Since(startTime)
 
 	if err != nil {
+		log.Printf("❌ CACHE DELETE ERROR: key=%s, error=%v, delete_time=%s, total_time=%s",
+			key, err, deleteTime.String(), totalTime.String())
 		return fmt.Errorf("failed to delete key %s: %w", key, err)
 	}
+
+	deletedCount := len(result)
+	log.Printf("✅ CACHE DELETE SUCCESS: key=%s, deleted_count=%d, delete_time=%s, total_time=%s",
+		key, deletedCount, deleteTime.String(), totalTime.String())
 
 	return nil
 }
@@ -310,7 +369,12 @@ func (r *RedisService) SetWithExpiration(ctx context.Context, key string, value 
 
 // GetMultiple retrieves multiple keys at once
 func (r *RedisService) GetMultiple(ctx context.Context, keys []string) (map[string]interface{}, error) {
+	startTime := time.Now()
+
+	log.Printf("🔍 CACHE GET MULTIPLE START: key_count=%d, keys=%v", len(keys), keys)
+
 	if len(keys) == 0 {
+		log.Printf("⚠️  CACHE GET MULTIPLE EMPTY: no keys requested")
 		return make(map[string]interface{}), nil
 	}
 
@@ -321,24 +385,47 @@ func (r *RedisService) GetMultiple(ctx context.Context, keys []string) (map[stri
 	}
 
 	// Get all values
+	mgetStart := time.Now()
 	values, err := r.client.MGet(ctx, fullKeys...).Result()
+	mgetTime := time.Since(mgetStart)
+
 	if err != nil {
+		totalTime := time.Since(startTime)
+		log.Printf("❌ CACHE GET MULTIPLE ERROR: key_count=%d, error=%v, mget_time=%s, total_time=%s",
+			len(keys), err, mgetTime.String(), totalTime.String())
 		return nil, fmt.Errorf("failed to get multiple keys: %w", err)
 	}
 
 	// Parse results
+	parseStart := time.Now()
 	result := make(map[string]interface{})
+	hitCount := 0
+	missCount := 0
+
 	for i, value := range values {
 		if value != nil {
 			var dest interface{}
 			err := json.Unmarshal([]byte(value.(string)), &dest)
 			if err == nil {
 				result[keys[i]] = dest
+				hitCount++
 				// Update access count asynchronously
 				go r.updateAccessCount(keys[i])
+			} else {
+				log.Printf("⚠️  CACHE GET MULTIPLE UNMARSHAL ERROR: key=%s, error=%v", keys[i], err)
+				missCount++
 			}
+		} else {
+			missCount++
 		}
 	}
+
+	parseTime := time.Since(parseStart)
+	totalTime := time.Since(startTime)
+
+	log.Printf("✅ CACHE GET MULTIPLE SUCCESS: key_count=%d, hit_count=%d, miss_count=%d, hit_rate=%.2f%%, mget_time=%s, parse_time=%s, total_time=%s",
+		len(keys), hitCount, missCount, float64(hitCount)/float64(len(keys))*100,
+		mgetTime.String(), parseTime.String(), totalTime.String())
 
 	return result, nil
 }
@@ -374,17 +461,41 @@ func (r *RedisService) SetMultiple(ctx context.Context, items map[string]interfa
 
 // updateAccessCount increments the access count for a key
 func (r *RedisService) updateAccessCount(key string) {
+	startTime := time.Now()
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
 
 	metadataKey := r.generateKey(fmt.Sprintf("meta:%s", key))
-	r.client.Incr(ctx, metadataKey+":access_count")
+	accessCountKey := metadataKey + ":access_count"
+
+	incrStart := time.Now()
+	newCount, err := r.client.Incr(ctx, accessCountKey).Result()
+	incrTime := time.Since(incrStart)
+	totalTime := time.Since(startTime)
+
+	if err != nil {
+		log.Printf("⚠️  CACHE ACCESS COUNT ERROR: key=%s, access_key=%s, error=%v, time=%s",
+			key, accessCountKey, err, totalTime.String())
+	} else {
+		log.Printf("📊 CACHE ACCESS COUNT UPDATED: key=%s, access_key=%s, new_count=%d, incr_time=%s, total_time=%s",
+			key, accessCountKey, newCount, incrTime.String(), totalTime.String())
+	}
 }
 
 // GetStats returns cache statistics
 func (r *RedisService) GetStats(ctx context.Context) (map[string]interface{}, error) {
+	startTime := time.Now()
+
+	log.Printf("📊 CACHE STATS START: getting Redis statistics")
+
+	infoStart := time.Now()
 	info, err := r.client.Info(ctx).Result()
+	infoTime := time.Since(infoStart)
+
 	if err != nil {
+		totalTime := time.Since(startTime)
+		log.Printf("❌ CACHE STATS ERROR: failed to get Redis info, error=%v, info_time=%s, total_time=%s",
+			err, infoTime.String(), totalTime.String())
 		return nil, fmt.Errorf("failed to get Redis info: %w", err)
 	}
 
@@ -393,7 +504,12 @@ func (r *RedisService) GetStats(ctx context.Context) (map[string]interface{}, er
 		"info":        info,
 		"key_prefix":  r.keyPrefix,
 		"default_ttl": r.defaultTTL.String(),
+		"info_size":   len(info),
 	}
+
+	totalTime := time.Since(startTime)
+	log.Printf("✅ CACHE STATS SUCCESS: info_size=%d bytes, info_time=%s, total_time=%s",
+		len(info), infoTime.String(), totalTime.String())
 
 	return stats, nil
 }

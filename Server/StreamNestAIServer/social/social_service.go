@@ -85,6 +85,11 @@ func NewSocialService(client *mongo.Client) *SocialService {
 	}
 }
 
+// GetDatabase returns the database instance
+func (ss *SocialService) GetDatabase() *mongo.Database {
+	return ss.db
+}
+
 // Initialize sets up the social service
 func (ss *SocialService) Initialize() error {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
@@ -135,6 +140,15 @@ func (ss *SocialService) GetProfile(userID string) (*UserProfile, error) {
 
 	err := coll.FindOne(ctx, bson.M{"user_id": userID}).Decode(&profile)
 	if err != nil {
+		// If profile doesn't exist, create a default one
+		if err == mongo.ErrNoDocuments {
+			defaultProfile := ss.createDefaultProfile(userID)
+			_, insertErr := coll.InsertOne(ctx, defaultProfile)
+			if insertErr != nil {
+				return nil, insertErr
+			}
+			return defaultProfile, nil
+		}
 		return nil, err
 	}
 
@@ -481,6 +495,11 @@ func (ss *SocialService) GetWatchlistByID(watchlistID string) (*Watchlist, error
 	return &watchlist, nil
 }
 
+// GetWatchlist retrieves a watchlist by ID (alias for GetWatchlistByID)
+func (ss *SocialService) GetWatchlist(watchlistID string) (*Watchlist, error) {
+	return ss.GetWatchlistByID(watchlistID)
+}
+
 // Helper functions
 
 func (ss *SocialService) updateFollowCounts(followerID, followingID string) {
@@ -517,4 +536,49 @@ func (ss *SocialService) createActivity(userID, activityType, content string, me
 
 	_, err := coll.InsertOne(ctx, activity)
 	return err
+}
+
+// createDefaultProfile creates a default user profile
+func (ss *SocialService) createDefaultProfile(userID string) *UserProfile {
+	now := time.Now()
+	
+	// Generate username safely - handle empty userID
+	var username string
+	if len(userID) >= 8 {
+		username = "user_" + userID[:8]
+	} else if len(userID) > 0 {
+		username = "user_" + userID
+	} else {
+		// Generate a unique ID for empty userID cases
+		generatedID := bson.NewObjectID().Hex()
+		username = "user_" + generatedID[:8]
+		userID = generatedID // Use the generated ID as the userID
+	}
+	
+	return &UserProfile{
+		UserID:         userID,
+		Username:       username,
+		DisplayName:    "New User",
+		Bio:            "Welcome to StreamNestAI!",
+		Avatar:         "",
+		FollowersCount: 0,
+		FollowingCount: 0,
+		PostsCount:     0,
+		WatchlistCount: 0,
+		Watchlists:     []string{},
+		FavoriteGenres: []string{},
+		IsPrivate:      false,
+		IsVerified:     false,
+		JoinDate:       now,
+		CreatedAt:      now,
+		UpdatedAt:      now,
+		Stats: UserStats{
+			TotalWatchTime: 0,
+			MoviesWatched:  0,
+			SeriesWatched:  0,
+			AverageRating:  0.0,
+			StreakDays:     0,
+			BadgeCount:     0,
+		},
+	}
 }
