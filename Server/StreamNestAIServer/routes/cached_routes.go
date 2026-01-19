@@ -22,17 +22,44 @@ func SetupCachedRoutes(router *gin.Engine) {
 	}
 
 	// Initialize Redis service for cached controllers using environment variables
+	log.Printf("🔧 INITIALIZING CACHED ROUTES - ENVIRONMENT CHECK:")
+
 	redisHost := os.Getenv("REDIS_HOST")
 	redisPort := os.Getenv("REDIS_PORT")
 	redisPassword := os.Getenv("REDIS_PASSWORD")
+	redisAddr := os.Getenv("REDIS_ADDR")
+
+	log.Printf("   REDIS_HOST: %s", redisHost)
+	log.Printf("   REDIS_PORT: %s", redisPort)
+	log.Printf("   REDIS_ADDR: %s", redisAddr)
+	log.Printf("   REDIS_PASSWORD: %s", func() string {
+		if redisPassword == "" {
+			return "[EMPTY]"
+		}
+		return "[SET]"
+	}())
 
 	// Validate required environment variables
 	if redisHost == "" {
+		log.Printf("❌ DEPLOYMENT ERROR: REDIS_HOST environment variable is required")
+		log.Printf("   Current environment variables:")
+		log.Printf("   - REDIS_HOST: '%s'", redisHost)
+		log.Printf("   - REDIS_PORT: '%s'", redisPort)
+		log.Printf("   - REDIS_ADDR: '%s'", redisAddr)
+		log.Printf("   Fix: Set REDIS_HOST in your deployment environment")
 		log.Fatal("REDIS_HOST environment variable is required")
 	}
 	if redisPort == "" {
+		log.Printf("❌ DEPLOYMENT ERROR: REDIS_PORT environment variable is required")
+		log.Printf("   Current environment variables:")
+		log.Printf("   - REDIS_HOST: '%s'", redisHost)
+		log.Printf("   - REDIS_PORT: '%s'", redisPort)
+		log.Printf("   - REDIS_ADDR: '%s'", redisAddr)
+		log.Printf("   Fix: Set REDIS_PORT in your deployment environment")
 		log.Fatal("REDIS_PORT environment variable is required")
 	}
+
+	log.Printf("✅ Required Redis environment variables found")
 
 	redisConfig := cache.CacheConfig{
 		Host:         redisHost,
@@ -40,7 +67,7 @@ func SetupCachedRoutes(router *gin.Engine) {
 		Password:     redisPassword, // Can be empty if no password required
 		DB:           0,
 		KeyPrefix:    "streamnestai",
-		DefaultTTL:   5 * time.Minute,
+		DefaultTTL:   30 * time.Minute,
 		PoolSize:     10,
 		MinIdleConns: 5,
 		DialTimeout:  5 * time.Second,
@@ -48,13 +75,26 @@ func SetupCachedRoutes(router *gin.Engine) {
 		WriteTimeout: 3 * time.Second,
 	}
 
+	log.Printf("🚀 Creating Redis service with configuration...")
 	redisService, err := cache.NewRedisService(redisConfig)
 	if err != nil {
-		log.Printf("Failed to initialize Redis service for cached routes: %v", err)
-		log.Printf("Cached routes will not be available. Check Redis configuration.")
+		log.Printf("❌ DEPLOYMENT CRITICAL: Failed to initialize Redis service for cached routes")
+		log.Printf("   Error: %v", err)
+		log.Printf("   Redis Host: %s", redisHost)
+		log.Printf("   Redis Port: %s", redisPort)
+		log.Printf("   Redis Address: %s", redisAddr)
+		log.Printf("   Troubleshooting steps:")
+		log.Printf("   1. Verify Redis server is running at %s:%s", redisHost, redisPort)
+		log.Printf("   2. Check if Redis password is correct")
+		log.Printf("   3. Ensure network connectivity to Redis server")
+		log.Printf("   4. Verify Redis allows remote connections")
+		log.Printf("   5. Check firewall settings")
+		log.Printf("   Cached routes will not be available. Check Redis configuration.")
 		// Log error but don't fail - cached routes won't be available
 		return
 	}
+
+	log.Printf("✅ Redis service initialized successfully for cached routes")
 
 	// Initialize cached controllers
 	cachedMovieController := controllers.NewCachedMovieController(sc.MongoClient, redisService)
@@ -161,17 +201,17 @@ func ValidateCacheRequest(c *gin.Context) (limit int, offset int, err error) {
 func GetCacheTTL(dataType string) time.Duration {
 	switch dataType {
 	case "movies":
-		return 15 * time.Minute // Movies change less frequently
+		return 30 * time.Minute // Movies change less frequently - updated to 30 mins
 	case "recommendations":
-		return 10 * time.Minute // Recommendations are more dynamic
+		return 30 * time.Minute // Recommendations - updated to 30 mins
 	case "user_data":
-		return 5 * time.Minute // User data changes frequently
+		return 30 * time.Minute // User data - updated to 30 mins
 	case "popular":
 		return 30 * time.Minute // Popular movies list is stable
 	case "trending":
-		return 5 * time.Minute // Trending changes frequently
+		return 30 * time.Minute // Trending - updated to 30 mins
 	default:
-		return 10 * time.Minute // Default TTL
+		return 30 * time.Minute // Default TTL - updated to 30 mins
 	}
 }
 

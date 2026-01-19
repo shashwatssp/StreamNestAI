@@ -43,8 +43,25 @@ type CacheConfig struct {
 
 // NewRedisService creates a new Redis service with connection pooling
 func NewRedisService(config CacheConfig) (*RedisService, error) {
+	// Log configuration for debugging (without password)
+	log.Printf("🔧 REDIS CONFIG DEBUG:")
+	log.Printf("   Host: %s", config.Host)
+	log.Printf("   Port: %s", config.Port)
+	log.Printf("   DB: %d", config.DB)
+	log.Printf("   KeyPrefix: %s", config.KeyPrefix)
+	log.Printf("   DefaultTTL: %s", config.DefaultTTL.String())
+	log.Printf("   PoolSize: %d", config.PoolSize)
+	log.Printf("   MinIdleConns: %d", config.MinIdleConns)
+	log.Printf("   DialTimeout: %s", config.DialTimeout.String())
+	log.Printf("   ReadTimeout: %s", config.ReadTimeout.String())
+	log.Printf("   WriteTimeout: %s", config.WriteTimeout.String())
+
+	// Construct Redis connection string for logging
+	redisAddr := fmt.Sprintf("%s:%s", config.Host, config.Port)
+	log.Printf("🔗 Connecting to Redis at: %s", redisAddr)
+
 	rdb := redis.NewClient(&redis.Options{
-		Addr:         fmt.Sprintf("%s:%s", config.Host, config.Port),
+		Addr:         redisAddr,
 		Password:     config.Password,
 		DB:           config.DB,
 		PoolSize:     config.PoolSize,
@@ -54,14 +71,64 @@ func NewRedisService(config CacheConfig) (*RedisService, error) {
 		WriteTimeout: config.WriteTimeout,
 	})
 
-	// Test connection
+	// Test connection with detailed logging
+	log.Printf("🔍 Testing Redis connection...")
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 
-	_, err := rdb.Ping(ctx).Result()
+	startTime := time.Now()
+	pong, err := rdb.Ping(ctx).Result()
+	connectionTime := time.Since(startTime)
+
 	if err != nil {
+		log.Printf("❌ REDIS CONNECTION FAILED:")
+		log.Printf("   Error: %v", err)
+		log.Printf("   Connection Time: %s", connectionTime.String())
+		log.Printf("   Redis Address: %s", redisAddr)
+		log.Printf("   Database: %d", config.DB)
+		log.Printf("   Troubleshooting:")
+		log.Printf("   1. Check if Redis server is running at %s", redisAddr)
+		log.Printf("   2. Verify password is correct")
+		log.Printf("   3. Check network connectivity")
+		log.Printf("   4. Verify Redis configuration allows remote connections")
 		return nil, fmt.Errorf("failed to connect to Redis: %w", err)
 	}
+
+	log.Printf("✅ REDIS CONNECTION SUCCESSFUL:")
+	log.Printf("   Response: %s", pong)
+	log.Printf("   Connection Time: %s", connectionTime.String())
+	log.Printf("   Redis Address: %s", redisAddr)
+	log.Printf("   Database: %d", config.DB)
+	log.Printf("   Key Prefix: %s", config.KeyPrefix)
+
+	// Test basic operations
+	log.Printf("🧪 Testing Redis operations...")
+	testKey := fmt.Sprintf("%s:test_connection", config.KeyPrefix)
+	testValue := map[string]interface{}{
+		"test":      true,
+		"timestamp": time.Now(),
+		"message":   "Redis connection test",
+	}
+
+	err = rdb.Set(ctx, testKey, testValue, 10*time.Second).Err()
+	if err != nil {
+		log.Printf("⚠️  Redis SET test failed: %v", err)
+	} else {
+		log.Printf("✅ Redis SET test passed")
+	}
+
+	var retrievedValue map[string]interface{}
+	err = rdb.Get(ctx, testKey).Scan(&retrievedValue)
+	if err != nil {
+		log.Printf("⚠️  Redis GET test failed: %v", err)
+	} else {
+		log.Printf("✅ Redis GET test passed")
+	}
+
+	// Clean up test key
+	rdb.Del(ctx, testKey)
+
+	log.Printf("🚀 Redis service initialized successfully")
 
 	return &RedisService{
 		client:     rdb,

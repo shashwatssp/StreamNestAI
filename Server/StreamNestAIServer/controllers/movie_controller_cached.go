@@ -42,9 +42,16 @@ func (cmc *CachedMovieController) GetMoviesWithCache() gin.HandlerFunc {
 		log.Println("INFO: GetMoviesWithCache endpoint called")
 		startTime := time.Now()
 
-		// Generate cache key
-		cacheKey := "movies:all"
-		log.Printf("DEBUG: Generated cache key: %s", cacheKey)
+		// Generate cache key with query parameters
+		searchQuery := c.Query("search")
+		var cacheKey string
+		if searchQuery != "" {
+			cacheKey = fmt.Sprintf("movies:search:%s", searchQuery)
+			log.Printf("DEBUG: Generated cache key: %s", cacheKey)
+		} else {
+			cacheKey = "movies:all"
+			log.Printf("DEBUG: Generated cache key: %s", cacheKey)
+		}
 
 		// Try to get from Redis first
 		var movies []models.Movie
@@ -104,19 +111,17 @@ func (cmc *CachedMovieController) GetMoviesWithCache() gin.HandlerFunc {
 		elapsedTime := time.Since(startTime)
 		log.Printf("MONGODB SUCCESS: Retrieved %d movies from MongoDB in %v", len(movies), elapsedTime)
 
-		// Cache the results for future requests
-		if len(movies) > 0 {
-			cacheCtx, cacheCancel := context.WithTimeout(context.Background(), 5*time.Second)
-			defer cacheCancel()
+		// Cache the results for future requests (including empty results)
+		cacheCtx, cacheCancel := context.WithTimeout(context.Background(), 5*time.Second)
+		defer cacheCancel()
 
-			// Cache for 15 minutes
-			cacheTTL := 15 * time.Minute
-			err = cmc.redisService.Set(cacheCtx, cacheKey, movies, cacheTTL)
-			if err != nil {
-				log.Printf("WARNING: Failed to cache movies in Redis: %v", err)
-			} else {
-				log.Printf("SUCCESS: Cached %d movies in Redis for %v", len(movies), cacheTTL)
-			}
+		// Cache for 30 minutes as requested
+		cacheTTL := 30 * time.Minute
+		err = cmc.redisService.Set(cacheCtx, cacheKey, movies, cacheTTL)
+		if err != nil {
+			log.Printf("WARNING: Failed to cache movies in Redis: %v", err)
+		} else {
+			log.Printf("SUCCESS: Cached %d movies in Redis for %v", len(movies), cacheTTL)
 		}
 
 		if len(movies) == 0 {
@@ -315,19 +320,17 @@ func (cmc *CachedMovieController) GetRecommendedMoviesWithCache() gin.HandlerFun
 		elapsedTime := time.Since(startTime)
 		log.Printf("MONGODB SUCCESS: Retrieved %d recommended movies for user %s from MongoDB in %v", len(recommendedMovies), userId, elapsedTime)
 
-		// Cache the results for future requests
-		if len(recommendedMovies) > 0 {
-			cacheCtx, cacheCancel := context.WithTimeout(context.Background(), 5*time.Second)
-			defer cacheCancel()
+		// Cache the results for future requests (including empty results)
+		cacheCtx, cacheCancel := context.WithTimeout(context.Background(), 5*time.Second)
+		defer cacheCancel()
 
-			// Cache recommendations for 10 minutes (shorter TTL as they change more frequently)
-			cacheTTL := 10 * time.Minute
-			err = cmc.redisService.Set(cacheCtx, cacheKey, recommendedMovies, cacheTTL)
-			if err != nil {
-				log.Printf("WARNING: Failed to cache recommended movies for user %s in Redis: %v", userId, err)
-			} else {
-				log.Printf("SUCCESS: Cached %d recommended movies for user %s in Redis for %v", len(recommendedMovies), userId, cacheTTL)
-			}
+		// Cache recommendations for 30 minutes as requested
+		cacheTTL := 30 * time.Minute
+		err = cmc.redisService.Set(cacheCtx, cacheKey, recommendedMovies, cacheTTL)
+		if err != nil {
+			log.Printf("WARNING: Failed to cache recommended movies for user %s in Redis: %v", userId, err)
+		} else {
+			log.Printf("SUCCESS: Cached %d recommended movies for user %s in Redis for %v", len(recommendedMovies), userId, cacheTTL)
 		}
 
 		c.Header("X-Data-Source", "mongodb")
