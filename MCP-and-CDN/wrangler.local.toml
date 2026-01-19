@@ -1,0 +1,25 @@
+# StreamNestAI Cloudflare Worker - Local Development Configuration
+# This file is specifically configured for local development
+
+name = "streamnest-mcp-local"
+main = "src/index.ts"
+compatibility_date = "2025-11-15"
+
+# Local development configuration
+[env.local]
+name = "streamnest-mcp-local"
+
+# Observability enabled for debugging
+observability = { enabled = true }
+
+# Development-specific settings
+[env.local.vars]
+BACKEND_URL = "http://localhost:8080"
+ENVIRONMENT = "local"
+DEBUG = "true"
+
+# Local KV namespace for development
+[[kv_namespaces]]
+binding = "MOVIE_CACHE"
+id = "local-movie-cache"
+preview_id = "local-movie-cache-preview"

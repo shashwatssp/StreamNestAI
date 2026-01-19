@@ -11,7 +11,7 @@
 		"enabled": true
 	},
 	"vars": {
-		"BACKEND_URL": "https://streamnestai-v2.onrender.com"
+		"BACKEND_URL": "https://streamnestai.onrender.com"
 	},
 	"kv_namespaces": [
 		{
