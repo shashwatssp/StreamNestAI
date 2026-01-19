@@ -63,8 +63,12 @@ func main() {
 			log.Println("Allowed Origin:", origins[i])
 		}
 	} else {
-		origins = []string{"http://localhost:5173"}
-		log.Println("Allowed Origin: http://localhost:5173")
+		origins = []string{
+			"http://localhost:5173",
+			"https://stream-nest-3py4n2m1t-shashwatssps-projects.vercel.app",
+			"https://stream-nest-3py4n2m1t-shashwatssps-projects.vercel.app/",
+		}
+		log.Println("Allowed Origins: http://localhost:5173, https://stream-nest-3py4n2m1t-shashwatssps-projects.vercel.app, https://stream-nest-3py4n2m1t-shashwatssps-projects.vercel.app/")
 	}
 
 	config := cors.Config{}

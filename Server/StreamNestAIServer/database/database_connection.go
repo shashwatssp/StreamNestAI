@@ -13,10 +13,10 @@ import (
 
 func Connect() *mongo.Client {
 
-	err := godotenv.Load(".env")
+	err := godotenv.Load(".env.local")
 
 	if err != nil {
-		log.Println("WARNING: Unable to Find .env file")
+		log.Println("WARNING: Unable to Find .env.local file")
 	}
 
 	MongoDB := os.Getenv("MONGODB_URI")
@@ -56,9 +56,9 @@ var Client *mongo.Client = Connect()
 
 func OpenCollection(collectionName string, client *mongo.Client) *mongo.Collection {
 
-	err := godotenv.Load(".env")
+	err := godotenv.Load(".env.local")
 	if err != nil {
-		log.Println("WARNING: Unable to find .env file in OpenCollection")
+		log.Println("WARNING: Unable to find .env.local file in OpenCollection")
 	}
 
 	databaseName := os.Getenv("DATABASE_NAME")

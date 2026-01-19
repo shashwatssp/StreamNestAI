@@ -6,6 +6,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/shashwatssp/StreamNestAI/Server/StreamNestAIServer/analytics"
+	"github.com/shashwatssp/StreamNestAI/Server/StreamNestAIServer/controllers"
+	"github.com/shashwatssp/StreamNestAI/Server/StreamNestAIServer/database"
 	"github.com/shashwatssp/StreamNestAI/Server/StreamNestAIServer/middleware"
 )
 
@@ -67,10 +69,8 @@ func setupV1PublicRoutes(v1 *gin.RouterGroup, sc *ServiceContainer) {
 	v1.GET("/movies", func(c *gin.Context) {
 		// Delegate to original movie controller
 		// This maintains compatibility with existing v1 clients
-		c.JSON(http.StatusOK, gin.H{
-			"message": "v1 movies endpoint",
-			"version": "v1",
-		})
+		getMoviesHandler := controllers.GetMovies(database.Client)
+		getMoviesHandler(c) // Call the actual movie controller function
 	})
 
 	v1.GET("/movies/:id", func(c *gin.Context) {

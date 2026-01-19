@@ -68,6 +68,9 @@ func GetMovies(client *mongo.Client) gin.HandlerFunc {
 		
 		if len(movies) == 0 {
 			log.Println("WARNING: No movies found in database - collection might be empty")
+			// Ensure we return an empty array instead of null
+			c.JSON(http.StatusOK, []models.Movie{})
+			return
 		} else {
 			log.Printf("DEBUG: First movie title: %s", movies[0].Title)
 		}
@@ -232,8 +235,37 @@ func GetReviewRanking(admin_review string, client *mongo.Client, c *gin.Context)
 	log.Println("API Key loaded:", OpenAiApiKey != "")
 
 	if OpenAiApiKey == "" {
-		log.Println("API Key is empty")
-		return "", 0, errors.New("could not read API key")
+		log.Println("API Key is empty - using fallback sentiment analysis")
+		
+		// Simple fallback sentiment analysis for local development
+		reviewLower := strings.ToLower(admin_review)
+		var sentiment string
+		var rankVal int
+		
+		// Simple keyword-based sentiment analysis
+		if strings.Contains(reviewLower, "excellent") || strings.Contains(reviewLower, "amazing") || strings.Contains(reviewLower, "fantastic") || strings.Contains(reviewLower, "love") || strings.Contains(reviewLower, "perfect") {
+			sentiment = "Excellent"
+			rankVal = 1
+		} else if strings.Contains(reviewLower, "good") || strings.Contains(reviewLower, "great") || strings.Contains(reviewLower, "nice") || strings.Contains(reviewLower, "enjoyed") {
+			sentiment = "Good"
+			rankVal = 2
+		} else if strings.Contains(reviewLower, "okay") || strings.Contains(reviewLower, "fine") || strings.Contains(reviewLower, "decent") || strings.Contains(reviewLower, "average") {
+			sentiment = "Okay"
+			rankVal = 3
+		} else if strings.Contains(reviewLower, "bad") || strings.Contains(reviewLower, "poor") || strings.Contains(reviewLower, "disappoint") || strings.Contains(reviewLower, "didn't like") {
+			sentiment = "Bad"
+			rankVal = 4
+		} else if strings.Contains(reviewLower, "terrible") || strings.Contains(reviewLower, "awful") || strings.Contains(reviewLower, "hate") || strings.Contains(reviewLower, "worst") {
+			sentiment = "Terrible"
+			rankVal = 5
+		} else {
+			// Default to "Okay" if no clear sentiment detected
+			sentiment = "Okay"
+			rankVal = 3
+		}
+		
+		log.Printf("Fallback sentiment analysis result: %s (rank: %d)", sentiment, rankVal)
+		return sentiment, rankVal, nil
 	}
 
 	// Initialize with DeepSeek base URL and model
@@ -251,8 +283,9 @@ func GetReviewRanking(admin_review string, client *mongo.Client, c *gin.Context)
 	log.Println("Base prompt template:", base_prompt_template)
 
 	if base_prompt_template == "" {
-		log.Println("BASE_PROMPT_TEMPLATE is empty")
-		return "", 0, errors.New("missing base prompt template")
+		log.Println("BASE_PROMPT_TEMPLATE is empty - using fallback")
+		// Use a simple fallback prompt template
+		base_prompt_template = fmt.Sprintf("Analyze the sentiment of this movie review and respond with exactly one of these ratings: %s. Review: ", sentimentDelimited)
 	}
 
 	base_prompt := strings.Replace(base_prompt_template, "{rankings}", sentimentDelimited, 1)
@@ -262,7 +295,37 @@ func GetReviewRanking(admin_review string, client *mongo.Client, c *gin.Context)
 	response, err := llm.Call(c, fullPrompt)
 	if err != nil {
 		log.Println("DeepSeek call error:", err)
-		return "", 0, err
+		log.Println("Falling back to local sentiment analysis due to API failure")
+		
+		// Fallback sentiment analysis when API fails
+		reviewLower := strings.ToLower(admin_review)
+		var sentiment string
+		var rankVal int
+		
+		// Simple keyword-based sentiment analysis
+		if strings.Contains(reviewLower, "excellent") || strings.Contains(reviewLower, "amazing") || strings.Contains(reviewLower, "fantastic") || strings.Contains(reviewLower, "love") || strings.Contains(reviewLower, "perfect") || strings.Contains(reviewLower, "sublime") {
+			sentiment = "Excellent"
+			rankVal = 1
+		} else if strings.Contains(reviewLower, "good") || strings.Contains(reviewLower, "great") || strings.Contains(reviewLower, "nice") || strings.Contains(reviewLower, "enjoyed") || strings.Contains(reviewLower, "wonderful") {
+			sentiment = "Good"
+			rankVal = 2
+		} else if strings.Contains(reviewLower, "okay") || strings.Contains(reviewLower, "fine") || strings.Contains(reviewLower, "decent") || strings.Contains(reviewLower, "average") {
+			sentiment = "Okay"
+			rankVal = 3
+		} else if strings.Contains(reviewLower, "bad") || strings.Contains(reviewLower, "poor") || strings.Contains(reviewLower, "disappoint") || strings.Contains(reviewLower, "didn't like") {
+			sentiment = "Bad"
+			rankVal = 4
+		} else if strings.Contains(reviewLower, "terrible") || strings.Contains(reviewLower, "awful") || strings.Contains(reviewLower, "hate") || strings.Contains(reviewLower, "worst") {
+			sentiment = "Terrible"
+			rankVal = 5
+		} else {
+			// Default to "Okay" if no clear sentiment detected
+			sentiment = "Okay"
+			rankVal = 3
+		}
+		
+		log.Printf("Fallback sentiment analysis result: %s (rank: %d)", sentiment, rankVal)
+		return sentiment, rankVal, nil
 	}
 	log.Println("DeepSeek response:", response)
 
