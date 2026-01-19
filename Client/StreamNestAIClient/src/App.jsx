@@ -15,6 +15,17 @@ import StreamMovie from './components/stream/StreamMovie';
 import {Route, Routes, useNavigate} from 'react-router-dom'
 import Explore from './components/explore/Explore';
 
+// New feature components
+import SocialFeatures from './components/social/SocialFeatures';
+import AdminDashboard from './components/admin/AdminDashboard';
+import AnalyticsDashboard from './components/analytics/AnalyticsDashboard';
+import Recommendations from './components/recommendations/Recommendations';
+import WatchlistManager from './components/watchlist/WatchlistManager';
+import EnhancedProfile from './components/profile/EnhancedProfile';
+import SystemMonitoring from './components/monitoring/SystemMonitoring';
+import NaturalLanguageSearch from './components/search/NaturalLanguageSearch';
+import ErrorBoundary from './components/ErrorBoundary';
+
 function App() {
 
   const navigate = useNavigate();
@@ -52,6 +63,48 @@ function App() {
             <Route path="/explore" element={<Explore />} />
             <Route path="/review/:imdb_id" element={<Review/>}></Route>
             <Route path="/stream/:yt_id" element={<StreamMovie/>}></Route>
+            
+            {/* New feature routes with error boundaries */}
+            <Route path="/social" element={
+              <ErrorBoundary>
+                <SocialFeatures />
+              </ErrorBoundary>
+            } />
+            <Route path="/admin" element={
+              <ErrorBoundary>
+                <AdminDashboard />
+              </ErrorBoundary>
+            } />
+            <Route path="/analytics" element={
+              <ErrorBoundary>
+                <AnalyticsDashboard />
+              </ErrorBoundary>
+            } />
+            <Route path="/recommendations" element={
+              <ErrorBoundary>
+                <Recommendations />
+              </ErrorBoundary>
+            } />
+            <Route path="/watchlist" element={
+              <ErrorBoundary>
+                <WatchlistManager />
+              </ErrorBoundary>
+            } />
+            <Route path="/profile-enhanced" element={
+              <ErrorBoundary>
+                <EnhancedProfile />
+              </ErrorBoundary>
+            } />
+            <Route path="/monitoring" element={
+              <ErrorBoundary>
+                <SystemMonitoring />
+              </ErrorBoundary>
+            } />
+            <Route path="/search" element={
+              <ErrorBoundary>
+                <NaturalLanguageSearch />
+              </ErrorBoundary>
+            } />
         </Route>
       </Routes>
 

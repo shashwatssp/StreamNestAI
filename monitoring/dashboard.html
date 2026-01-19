@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamNestAI Monitoring Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/prometheus-query@3.1.0/dist/prometheus-query.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .dashboard {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .metric-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .metric-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .metric-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .chart-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .chart-container h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .status-healthy { background-color: #10b981; }
+        .status-warning { background-color: #f59e0b; }
+        .status-error { background-color: #ef4444; }
+
+        .refresh-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            margin-bottom: 20px;
+        }
+
+        .refresh-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .config-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .config-section h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .config-input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .config-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .error-message {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .success-message {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            color: #16a34a;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>StreamNestAI Monitoring Dashboard</h1>
+            <p>Real-time monitoring and metrics for your enhanced streaming platform</p>
+        </div>
+
+        <div class="config-section">
+            <h3>🔧 Configuration</h3>
+            <input type="text" id="prometheusUrl" class="config-input" placeholder="Prometheus URL (e.g., http://localhost:9090)" value="http://localhost:9090">
+            <button class="refresh-btn" onclick="updateMetrics()">🔄 Refresh Metrics</button>
+        </div>
+
+        <div id="messages"></div>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <h3><span class="status-indicator status-healthy"></span>HTTP Requests</h3>
+                <div class="metric-value" id="httpRequests">0</div>
+                <div class="metric-label">Total requests</div>
+            </div>
+
+            <div class="metric-card">
+                <h3><span class="status-indicator status-healthy"></span>Active Connections</h3>
+                <div class="metric-value" id="activeConnections">0</div>
+                <div class="metric-label">WebSocket connections</div>
+            </div>
+
+            <div class="metric-card">
+                <h3><span class="status-indicator status-healthy"></span>Cache Hit Rate</h3>
+                <div class="metric-value" id="cacheHitRate">0%</div>
+                <div class="metric-label">Redis cache efficiency</div>
+            </div>
+
+            <div class="metric-card">
+                <h3><span class="status-indicator status-healthy"></span>Response Time</h3>
+                <div class="metric-value" id="responseTime">0ms</div>
+                <div class="metric-label">Average response time</div>
+            </div>
+
+            <div class="metric-card">
+                <h3><span class="status-indicator status-healthy"></span>Users Online</h3>
+                <div class="metric-value" id="usersOnline">0</div>
+                <div class="metric-label">Active users</div>
+            </div>
+
+            <div class="metric-card">
+                <h3><span class="status-indicator status-healthy"></span>Error Rate</h3>
+                <div class="metric-value" id="errorRate">0%</div>
+                <div class="metric-label">HTTP 5xx errors</div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h3>📊 Request Rate (Last 5 Minutes)</h3>
+            <canvas id="requestRateChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h3>📈 Response Time Trend (Last Hour)</h3>
+            <canvas id="responseTimeChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        let prometheusClient = null;
+        let requestRateChart = null;
+        let responseTimeChart = null;
+
+        function showMessage(message, type = 'error') {
+            const messagesDiv = document.getElementById('messages');
+            const messageClass = type === 'error' ? 'error-message' : 'success-message';
+            messagesDiv.innerHTML = `<div class="${messageClass}">${message}</div>`;
+            setTimeout(() => {
+                messagesDiv.innerHTML = '';
+            }, 5000);
+        }
+
+        async function initializePrometheus() {
+            const url = document.getElementById('prometheusUrl').value;
+            if (!url) {
+                showMessage('Please enter a Prometheus URL');
+                return false;
+            }
+
+            try {
+                prometheusClient = new PrometheusQuery({ url });
+                // Test connection
+                await prometheusClient.instantQuery('up');
+                showMessage('Connected to Prometheus successfully!', 'success');
+                return true;
+            } catch (error) {
+                showMessage(`Failed to connect to Prometheus: ${error.message}`);
+                return false;
+            }
+        }
+
+        async function updateMetrics() {
+            if (!await initializePrometheus()) {
+                return;
+            }
+
+            try {
+                // Update basic metrics
+                await updateBasicMetrics();
+                
+                // Update charts
+                await updateCharts();
+                
+                showMessage('Metrics updated successfully!', 'success');
+            } catch (error) {
+                showMessage(`Failed to update metrics: ${error.message}`);
+            }
+        }
+
+        async function updateBasicMetrics() {
+            try {
+                // HTTP Requests
+                const httpResult = await prometheusClient.instantQuery('sum(rate(http_requests_total[5m]))');
+                const httpValue = httpResult.data.result[0]?.value[1] || '0';
+                document.getElementById('httpRequests').textContent = parseFloat(httpValue).toFixed(2);
+
+                // Active Connections
+                const connectionsResult = await prometheusClient.instantQuery('websocket_connections_active');
+                const connectionsValue = connectionsResult.data.result[0]?.value[1] || '0';
+                document.getElementById('activeConnections').textContent = Math.round(parseFloat(connectionsValue));
+
+                // Cache Hit Rate
+                const cacheResult = await prometheusClient.instantQuery('rate(redis_cache_hits_total[5m]) / rate(redis_cache_operations_total[5m]) * 100');
+                const cacheValue = cacheResult.data.result[0]?.value[1] || '0';
+                document.getElementById('cacheHitRate').textContent = parseFloat(cacheValue).toFixed(1) + '%';
+
+                // Response Time
+                const responseResult = await prometheusClient.instantQuery('histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket[5m])) by (le))');
+                const responseValue = responseResult.data.result[0]?.value[1] || '0';
+                document.getElementById('responseTime').textContent = (parseFloat(responseValue) * 1000).toFixed(0) + 'ms';
+
+                // Users Online
+                const usersResult = await prometheusClient.instantQuery('active_users_total');
+                const usersValue = usersResult.data.result[0]?.value[1] || '0';
+                document.getElementById('usersOnline').textContent = Math.round(parseFloat(usersValue));
+
+                // Error Rate
+                const errorResult = await prometheusClient.instantQuery('rate(http_requests_total{status=~"5.."}[5m]) / rate(http_requests_total[5m]) * 100');
+                const errorValue = errorResult.data.result[0]?.value[1] || '0';
+                document.getElementById('errorRate').textContent = parseFloat(errorValue).toFixed(1) + '%';
+
+            } catch (error) {
+                console.error('Error updating basic metrics:', error);
+            }
+        }
+
+        async function updateCharts() {
+            try {
+                // Request Rate Chart
+                const requestRangeResult = await prometheusClient.rangeQuery('sum(rate(http_requests_total[5m]))', 'now-5m', 'now', '30s');
+                updateRequestRateChart(requestRangeResult.data.result);
+
+                // Response Time Chart
+                const responseRangeResult = await prometheusClient.rangeQuery('histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket[5m])) by (le))', 'now-1h', 'now', '5m');
+                updateResponseTimeChart(responseRangeResult.data.result);
+
+            } catch (error) {
+                console.error('Error updating charts:', error);
+            }
+        }
+
+        function updateRequestRateChart(data) {
+            const ctx = document.getElementById('requestRateChart').getContext('2d');
+            
+            if (requestRateChart) {
+                requestRateChart.destroy();
+            }
+
+            const labels = data[0]?.values.map(v => new Date(v[0] * 1000).toLocaleTimeString()) || [];
+            const values = data[0]?.values.map(v => parseFloat(v[1])) || [];
+
+            requestRateChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Requests/sec',
+                        data: values,
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateResponseTimeChart(data) {
+            const ctx = document.getElementById('responseTimeChart').getContext('2d');
+            
+            if (responseTimeChart) {
+                responseTimeChart.destroy();
+            }
+
+            const labels = data[0]?.values.map(v => new Date(v[0] * 1000).toLocaleTimeString()) || [];
+            const values = data[0]?.values.map(v => parseFloat(v[1]) * 1000) || [];
+
+            responseTimeChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Response Time (ms)',
+                        data: values,
+                        borderColor: '#764ba2',
+                        backgroundColor: 'rgba(118, 75, 162, 0.1)',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        // Auto-refresh every 30 seconds
+        setInterval(updateMetrics, 30000);
+
+        // Initial load
+        window.addEventListener('load', () => {
+            // Try to connect with default URL
+            updateMetrics();
+        });
+    </script>
+</body>
+</html>

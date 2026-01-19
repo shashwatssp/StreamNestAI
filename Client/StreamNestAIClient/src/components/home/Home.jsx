@@ -14,14 +14,16 @@ const Home =({updateMovieReview}) => {
             setMessage("");
             try{
                 const response = await axiosClient.get('/movies');
-                setMovies(response.data);
-                if (response.data.length === 0){
+                const moviesData = response.data || [];
+                setMovies(moviesData);
+                if (moviesData.length === 0){
                     setMessage('There are currently no movies available')
                 }
 
             }catch(error){
                 console.error('Error fetching movies:', error)
                 setMessage("Error fetching movies")
+                setMovies([])
             }finally{
                 setLoading(false)
             }

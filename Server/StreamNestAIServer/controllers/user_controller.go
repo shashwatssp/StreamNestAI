@@ -127,9 +127,9 @@ func LoginUser(client *mongo.Client) gin.HandlerFunc {
 			Path:  "/",
 			// Domain:   "localhost",
 			MaxAge:   86400,
-			Secure:   true,
+			Secure:   false, // Disabled for local development (HTTP)
 			HttpOnly: true,
-			SameSite: http.SameSiteNoneMode,
+			SameSite: http.SameSiteLaxMode, // Changed for local development
 		})
 		http.SetCookie(c.Writer, &http.Cookie{
 			Name:  "refresh_token",
@@ -137,9 +137,9 @@ func LoginUser(client *mongo.Client) gin.HandlerFunc {
 			Path:  "/",
 			// Domain:   "localhost",
 			MaxAge:   604800,
-			Secure:   true,
+			Secure:   false, // Disabled for local development (HTTP)
 			HttpOnly: true,
-			SameSite: http.SameSiteNoneMode,
+			SameSite: http.SameSiteLaxMode, // Changed for local development
 		})
 
 		c.JSON(http.StatusOK, models.UserResponse{
@@ -185,9 +185,9 @@ func LogoutHandler(client *mongo.Client) gin.HandlerFunc {
 			Value:    "",
 			Path:     "/",
 			MaxAge:   -1,
-			Secure:   true,
+			Secure:   false, // Disabled for local development (HTTP)
 			HttpOnly: true,
-			SameSite: http.SameSiteNoneMode,
+			SameSite: http.SameSiteLaxMode, // Changed for local development
 		})
 
 		http.SetCookie(c.Writer, &http.Cookie{
@@ -195,9 +195,9 @@ func LogoutHandler(client *mongo.Client) gin.HandlerFunc {
 			Value:    "",
 			Path:     "/",
 			MaxAge:   -1,
-			Secure:   true,
+			Secure:   false, // Disabled for local development (HTTP)
 			HttpOnly: true,
-			SameSite: http.SameSiteNoneMode,
+			SameSite: http.SameSiteLaxMode, // Changed for local development
 		})
 
 		c.JSON(http.StatusOK, gin.H{"message": "Logged out successfully"})
@@ -246,9 +246,9 @@ func RefreshTokenHandler(client *mongo.Client) gin.HandlerFunc {
 			Value:    newToken,
 			Path:     "/",
 			MaxAge:   86400,
-			Secure:   true,
+			Secure:   false, // Disabled for local development (HTTP)
 			HttpOnly: true,
-			SameSite: http.SameSiteNoneMode,
+			SameSite: http.SameSiteLaxMode, // Changed for local development
 		})
 
 		http.SetCookie(c.Writer, &http.Cookie{
@@ -256,12 +256,10 @@ func RefreshTokenHandler(client *mongo.Client) gin.HandlerFunc {
 			Value:    newRefreshToken,
 			Path:     "/",
 			MaxAge:   604800,
-			Secure:   true,
+			Secure:   false, // Disabled for local development (HTTP)
 			HttpOnly: true,
-			SameSite: http.SameSiteNoneMode,
+			SameSite: http.SameSiteLaxMode, // Changed for local development
 		})
-
-		c.JSON(http.StatusOK, gin.H{"message": "Tokens refreshed"})
 
 		c.JSON(http.StatusOK, gin.H{"message": "Tokens refreshed"})
 	}

@@ -5,7 +5,7 @@ compatibility_date = "2025-11-15"
 node_compat = true
 
 [vars]
-BACKEND_URL = "https://streamnestai.onrender.com"
+BACKEND_URL = "http://localhost:8080"
 
 [[kv_namespaces]]
 binding = "MOVIE_CACHE"

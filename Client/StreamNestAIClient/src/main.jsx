@@ -7,7 +7,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthProvider.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // StrictMode disabled to prevent duplicate API calls in development
+  // Re-enable in production for better error detection
+  // <StrictMode>
     <AuthProvider>
       <BrowserRouter>
         <Routes>
@@ -15,5 +17,5 @@ createRoot(document.getElementById('root')).render(
         </Routes>
       </BrowserRouter>
     </AuthProvider>
-  </StrictMode>,
+  // </StrictMode>,
 )
