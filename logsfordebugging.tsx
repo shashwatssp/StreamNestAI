@@ -1,0 +1,6704 @@
+
+You said
+I am providing Frontend Logs
+You already have Backend Logs
+
+
+﻿
+7
+Denying load of <URL>. Resources must be listed in the web_accessible_resources manifest key in order to be loaded by pages outside the extension.
+chrome-extension://invalid/:1 
+ Failed to load resource: net::ERR_FAILED
+chrome-extension://invalid/:1 
+ Failed to load resource: net::ERR_FAILED
+chrome-extension://invalid/:1 
+ Failed to load resource: net::ERR_FAILED
+chrome-extension://invalid/:1 
+ Failed to load resource: net::ERR_FAILED
+chrome-extension://invalid/:1 
+ Failed to load resource: net::ERR_FAILED
+SocialFeatures.jsx:37 [2026-01-19T14:51:26.632Z] 🟢 [SOCIAL_FEATURES] API_CALL_ERROR: {"endpoint":"getSocialStats","userId":"68385b9981097c6b4042dab4","duration":"1ms","error":"socialApi.getSocialStats is not a function"} 
+Object
+logSocialFeature	@	SocialFeatures.jsx:37
+:8080/api/v2/profile…981097c6b4042dab4:1 
+ Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+axiosConfig.jsx:66 🔴 [FRONTEND API] 2026-01-19T14:51:26.682Z - Response Error: 
+AxiosError
+(anonymous)	@	axiosConfig.jsx:66
+axiosConfig.jsx:71 🔴 [FRONTEND API] Error Status: 500 Internal Server Error
+(anonymous)	@	axiosConfig.jsx:71
+axiosConfig.jsx:72 🔴 [FRONTEND API] Error Data: 
+Object
+(anonymous)	@	axiosConfig.jsx:72
+axiosConfig.jsx:73 🔴 [FRONTEND API] Error Headers: 
+AxiosHeaders
+(anonymous)	@	axiosConfig.jsx:73
+SocialFeatures.jsx:37 [2026-01-19T14:51:26.683Z] 🟢 [SOCIAL_FEATURES] API_CALL_ERROR: {"endpoint":"getUserProfile","userId":"68385b9981097c6b4042dab4","duration":"53ms","error":"Request failed with status code 500","status":500} 
+Object
+logSocialFeature	@	SocialFeatures.jsx:37
+chrome-extension://invalid/:1 
+ Failed to load resource: net::ERR_FAILED
+contentScript.bundle.js:348701 
+ GET chrome-extension://invalid/ net::ERR_FAILED
+social:1 Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received
+
+
+recommendations page not opening
+Uncaught TypeError: Cannot read properties of null (reading 'componentStack')
+    at ErrorBoundary.render (ErrorBoundary.jsx:53:41)
+    at Object.react_stack_bottom_frame (react-dom_client.js?v=e561f48e:18519:29)
+    at updateClassComponent (react-dom_client.js?v=e561f48e:7799:32)
+    at beginWork (react-dom_client.js?v=e561f48e:8536:16)
+    at runWithFiberInDEV (react-dom_client.js?v=e561f48e:997:72)
+    at performUnitOfWork (react-dom_client.js?v=e561f48e:12561:98)
+    at workLoopSync (react-dom_client.js?v=e561f48e:12424:43)
+    at renderRootSync (react-dom_client.js?v=e561f48e:12408:13)
+    at performWorkOnRoot (react-dom_client.js?v=e561f48e:11827:37)
+    at performSyncWorkOnRoot (react-dom_client.js?v=e561f48e:13517:9)
+render @ ErrorBoundary.jsx:53
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18519
+updateClassComponent @ react-dom_client.js?v=e561f48e:7799
+beginWork @ react-dom_client.js?v=e561f48e:8536
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopSync @ react-dom_client.js?v=e561f48e:12424
+renderRootSync @ react-dom_client.js?v=e561f48e:12408
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11827
+performSyncWorkOnRoot @ react-dom_client.js?v=e561f48e:13517
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=e561f48e:13414
+flushSpawnedWork @ react-dom_client.js?v=e561f48e:13067
+commitRoot @ react-dom_client.js?v=e561f48e:12804
+commitRootWhenReady @ react-dom_client.js?v=e561f48e:12016
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11950
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<ErrorBoundary>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:84
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopSync @ react-dom_client.js?v=e561f48e:12424
+renderRootSync @ react-dom_client.js?v=e561f48e:12408
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11827
+performSyncWorkOnRoot @ react-dom_client.js?v=e561f48e:13517
+flushSyncWorkAcrossRoots_impl @ react-dom_client.js?v=e561f48e:13414
+flushSpawnedWork @ react-dom_client.js?v=e561f48e:13067
+commitRoot @ react-dom_client.js?v=e561f48e:12804
+commitRootWhenReady @ react-dom_client.js?v=e561f48e:12016
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11950
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<App>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+(anonymous) @ main.jsx:16Understand this error
+6Denying load of <URL>. Resources must be listed in the web_accessible_resources manifest key in order to be loaded by pages outside the extension.Understand this error
+contentScript.bundle.js:128850  GET chrome-extension://invalid/ net::ERR_FAILED
+gj @ contentScript.bundle.js:128850
+fj @ contentScript.bundle.js:128849
+dk @ contentScript.bundle.js:128878
+__webpack_modules__.7463.exports.unstable_runWithPriority @ contentScript.bundle.js:131540
+gg @ contentScript.bundle.js:128744
+Uj @ contentScript.bundle.js:128874
+Lj @ contentScript.bundle.js:128865
+(anonymous) @ contentScript.bundle.js:128745
+__webpack_modules__.7463.exports.unstable_runWithPriority @ contentScript.bundle.js:131540
+gg @ contentScript.bundle.js:128744
+jg @ contentScript.bundle.js:128745
+ig @ contentScript.bundle.js:128744
+Xj @ contentScript.bundle.js:128866
+tk @ contentScript.bundle.js:128911
+__webpack_modules__.7133.exports.render @ contentScript.bundle.js:128918
+createAndMountRoot @ contentScript.bundle.js:452485
+(anonymous) @ contentScript.bundle.js:452488
+(anonymous) @ contentScript.bundle.js:452539
+(anonymous) @ contentScript.bundle.js:452541Understand this error
+contentScript.bundle.js:348701  GET chrome-extension://invalid/ net::ERR_FAILED
+fetchIt @ contentScript.bundle.js:348701
+requestWithFetch @ contentScript.bundle.js:348724
+request @ contentScript.bundle.js:348790
+loadUrl @ contentScript.bundle.js:348900
+(anonymous) @ contentScript.bundle.js:348890
+Promise.then
+_readAny @ contentScript.bundle.js:348884
+read @ contentScript.bundle.js:348873
+read @ contentScript.bundle.js:347952
+loadOne @ contentScript.bundle.js:347985
+(anonymous) @ contentScript.bundle.js:347969
+prepareLoading @ contentScript.bundle.js:347968
+load @ contentScript.bundle.js:347973
+loadResources @ contentScript.bundle.js:348297
+loadNamespaces @ contentScript.bundle.js:348499
+loadNamespaces @ contentScript.bundle.js:191570
+(anonymous) @ contentScript.bundle.js:192148
+useTranslation_useTranslation @ contentScript.bundle.js:192144
+RootWrapper @ contentScript.bundle.js:450600
+Ch @ contentScript.bundle.js:128779
+ck @ contentScript.bundle.js:128889
+bk @ contentScript.bundle.js:128872
+ak @ contentScript.bundle.js:128872
+Tj @ contentScript.bundle.js:128872
+Lj @ contentScript.bundle.js:128865
+(anonymous) @ contentScript.bundle.js:128745
+__webpack_modules__.7463.exports.unstable_runWithPriority @ contentScript.bundle.js:131540
+gg @ contentScript.bundle.js:128744
+jg @ contentScript.bundle.js:128745
+ig @ contentScript.bundle.js:128744
+Xj @ contentScript.bundle.js:128866
+tk @ contentScript.bundle.js:128911
+__webpack_modules__.7133.exports.render @ contentScript.bundle.js:128918
+createAndMountRoot @ contentScript.bundle.js:452485
+(anonymous) @ contentScript.bundle.js:452488
+(anonymous) @ contentScript.bundle.js:452539
+(anonymous) @ contentScript.bundle.js:452541Understand this error
+contentScript.bundle.js:348701  GET chrome-extension://invalid/ net::ERR_FAILED
+fetchIt @ contentScript.bundle.js:348701
+requestWithFetch @ contentScript.bundle.js:348724
+request @ contentScript.bundle.js:348790
+loadUrl @ contentScript.bundle.js:348900
+(anonymous) @ contentScript.bundle.js:348890
+Promise.then
+_readAny @ contentScript.bundle.js:348884
+read @ contentScript.bundle.js:348873
+read @ contentScript.bundle.js:347952
+(anonymous) @ contentScript.bundle.js:347932
+setTimeout
+resolver @ contentScript.bundle.js:347931
+(anonymous) @ contentScript.bundle.js:348909
+Promise.catch
+fetchIt @ contentScript.bundle.js:348701
+requestWithFetch @ contentScript.bundle.js:348724
+request @ contentScript.bundle.js:348790
+loadUrl @ contentScript.bundle.js:348900
+(anonymous) @ contentScript.bundle.js:348890
+Promise.then
+_readAny @ contentScript.bundle.js:348884
+read @ contentScript.bundle.js:348873
+read @ contentScript.bundle.js:347952
+loadOne @ contentScript.bundle.js:347985
+(anonymous) @ contentScript.bundle.js:347969
+prepareLoading @ contentScript.bundle.js:347968
+load @ contentScript.bundle.js:347973
+loadResources @ contentScript.bundle.js:348297
+loadNamespaces @ contentScript.bundle.js:348499
+loadNamespaces @ contentScript.bundle.js:191570
+(anonymous) @ contentScript.bundle.js:192148
+useTranslation_useTranslation @ contentScript.bundle.js:192144
+RootWrapper @ contentScript.bundle.js:450600
+Ch @ contentScript.bundle.js:128779
+ck @ contentScript.bundle.js:128889
+bk @ contentScript.bundle.js:128872
+ak @ contentScript.bundle.js:128872
+Tj @ contentScript.bundle.js:128872
+Lj @ contentScript.bundle.js:128865
+(anonymous) @ contentScript.bundle.js:128745
+__webpack_modules__.7463.exports.unstable_runWithPriority @ contentScript.bundle.js:131540
+gg @ contentScript.bundle.js:128744
+jg @ contentScript.bundle.js:128745
+ig @ contentScript.bundle.js:128744
+Xj @ contentScript.bundle.js:128866
+tk @ contentScript.bundle.js:128911
+__webpack_modules__.7133.exports.render @ contentScript.bundle.js:128918
+createAndMountRoot @ contentScript.bundle.js:452485
+(anonymous) @ contentScript.bundle.js:452488
+(anonymous) @ contentScript.bundle.js:452539
+(anonymous) @ contentScript.bundle.js:452541Understand this error
+contentScript.bundle.js:348701  GET chrome-extension://invalid/ net::ERR_FAILED
+fetchIt @ contentScript.bundle.js:348701
+requestWithFetch @ contentScript.bundle.js:348724
+request @ contentScript.bundle.js:348790
+loadUrl @ contentScript.bundle.js:348900
+(anonymous) @ contentScript.bundle.js:348890
+Promise.then
+_readAny @ contentScript.bundle.js:348884
+read @ contentScript.bundle.js:348873
+read @ contentScript.bundle.js:347952
+(anonymous) @ contentScript.bundle.js:347932
+setTimeout
+resolver @ contentScript.bundle.js:347931
+(anonymous) @ contentScript.bundle.js:348909
+Promise.catch
+fetchIt @ contentScript.bundle.js:348701
+requestWithFetch @ contentScript.bundle.js:348724
+request @ contentScript.bundle.js:348790
+loadUrl @ contentScript.bundle.js:348900
+(anonymous) @ contentScript.bundle.js:348890
+Promise.then
+_readAny @ contentScript.bundle.js:348884
+read @ contentScript.bundle.js:348873
+read @ contentScript.bundle.js:347952
+(anonymous) @ contentScript.bundle.js:347932
+setTimeout
+resolver @ contentScript.bundle.js:347931
+(anonymous) @ contentScript.bundle.js:348909
+Promise.catch
+fetchIt @ contentScript.bundle.js:348701
+requestWithFetch @ contentScript.bundle.js:348724
+request @ contentScript.bundle.js:348790
+loadUrl @ contentScript.bundle.js:348900
+(anonymous) @ contentScript.bundle.js:348890
+Promise.then
+_readAny @ contentScript.bundle.js:348884
+read @ contentScript.bundle.js:348873
+read @ contentScript.bundle.js:347952
+loadOne @ contentScript.bundle.js:347985
+(anonymous) @ contentScript.bundle.js:347969
+prepareLoading @ contentScript.bundle.js:347968
+load @ contentScript.bundle.js:347973
+loadResources @ contentScript.bundle.js:348297
+loadNamespaces @ contentScript.bundle.js:348499
+loadNamespaces @ contentScript.bundle.js:191570
+(anonymous) @ contentScript.bundle.js:192148
+useTranslation_useTranslation @ contentScript.bundle.js:192144
+RootWrapper @ contentScript.bundle.js:450600
+Ch @ contentScript.bundle.js:128779
+ck @ contentScript.bundle.js:128889
+bk @ contentScript.bundle.js:128872
+ak @ contentScript.bundle.js:128872
+Tj @ contentScript.bundle.js:128872
+Lj @ contentScript.bundle.js:128865
+(anonymous) @ contentScript.bundle.js:128745
+__webpack_modules__.7463.exports.unstable_runWithPriority @ contentScript.bundle.js:131540
+gg @ contentScript.bundle.js:128744
+jg @ contentScript.bundle.js:128745
+ig @ contentScript.bundle.js:128744
+Xj @ contentScript.bundle.js:128866
+tk @ contentScript.bundle.js:128911
+__webpack_modules__.7133.exports.render @ contentScript.bundle.js:128918
+createAndMountRoot @ contentScript.bundle.js:452485
+(anonymous) @ contentScript.bundle.js:452488
+(anonymous) @ contentScript.bundle.js:452539
+(anonymous) @ contentScript.bundle.js:452541Understand this error
+contentScript.bundle.js:348701  GET chrome-extension://invalid/ net::ERR_FAILED
+
+Denying load of chrome-extension://iadokddofjgcgjpjlfhngclhpmaelnli/src/assets/locales/en/translation.json. Resources must be listed in the web_accessible_resources manifest key in order to be loaded by pages outside the extension.
+
+contentScript.bundle.js:348701 
+ GET chrome-extension://invalid/ net::ERR_FAILED
+WatchlistManager.jsx:38 [2026-01-19T14:53:55.241Z] 📝 [WATCHLIST_MANAGER] API_CALL_ERROR: {"endpoint":"getUserWatchlists","userId":"68385b9981097c6b4042dab4","duration":"1ms","error":"watchlistApi.getUserWatchlists is not a function"} 
+{timestamp: '2026-01-19T14:53:55.241Z', feature: 'WATCHLIST_MANAGER', action: 'API_CALL_ERROR', data: {…}, level: 'error', …}
+action
+: 
+"API_CALL_ERROR"
+data
+: 
+{endpoint: 'getUserWatchlists', userId: '68385b9981097c6b4042dab4', duration: '1ms', error: 'watchlistApi.getUserWatchlists is not a function', status: undefined}
+feature
+: 
+"WATCHLIST_MANAGER"
+level
+: 
+"error"
+timestamp
+: 
+"2026-01-19T14:53:55.241Z"
+userId
+: 
+"anonymous"
+[[Prototype]]
+: 
+Object
+logWatchlistFeature	@	WatchlistManager.jsx:38
+loadMyWatchlists	@	WatchlistManager.jsx:132
+(anonymous)	@	WatchlistManager.jsx:95
+<WatchlistManager>		
+App	@	App.jsx:90
+<App>		
+(anonymous)	@	main.jsx:16
+
+WatchlistManager.jsx:38 [2026-01-19T14:55:39.722Z] 📝 [WATCHLIST_MANAGER] CREATE_WATCHLIST_ERROR: {"userId":"68385b9981097c6b4042dab4","watchlistName":"tt","duration":"0ms","error":"watchlistApi.createWatchlist is not a function"} 
+{timestamp: '2026-01-19T14:55:39.722Z', feature: 'WATCHLIST_MANAGER', action: 'CREATE_WATCHLIST_ERROR', data: {…}, level: 'error', …}
+action
+: 
+"CREATE_WATCHLIST_ERROR"
+data
+: 
+{userId: '68385b9981097c6b4042dab4', watchlistName: 'tt', duration: '0ms', error: 'watchlistApi.createWatchlist is not a function', status: undefined}
+feature
+: 
+"WATCHLIST_MANAGER"
+level
+: 
+"error"
+timestamp
+: 
+"2026-01-19T14:55:39.722Z"
+userId
+: 
+"anonymous"
+[[Prototype]]
+: 
+Object
+logWatchlistFeature	@	WatchlistManager.jsx:38
+handleCreateWatchlist	@	WatchlistManager.jsx:233
+<Form>		
+WatchlistManager	@	WatchlistManager.jsx:816
+<WatchlistManager>		
+App	@	App.jsx:90
+<App>		
+(anonymous)	@	main.jsx:16
+
+
+[2026-01-19T14:56:08.381Z] 📝 [WATCHLIST_MANAGER] API_CALL_ERROR: {"endpoint":"getUserWatchlists","userId":"68385b9981097c6b4042dab4","duration":"1ms","error":"watchlistApi.getUserWatchlists is not a function"} 
+{timestamp: '2026-01-19T14:56:08.381Z', feature: 'WATCHLIST_MANAGER', action: 'API_CALL_ERROR', data: {…}, level: 'error', …}
+action
+: 
+"API_CALL_ERROR"
+data
+: 
+{endpoint: 'getUserWatchlists', userId: '68385b9981097c6b4042dab4', duration: '1ms', error: 'watchlistApi.getUserWatchlists is not a function', status: undefined}
+feature
+: 
+"WATCHLIST_MANAGER"
+level
+: 
+"error"
+timestamp
+: 
+"2026-01-19T14:56:08.381Z"
+userId
+: 
+"anonymous"
+[[Prototype]]
+: 
+Object
+logWatchlistFeature	@	WatchlistManager.jsx:38
+loadMyWatchlists	@	WatchlistManager.jsx:132
+<Button>		
+WatchlistManager	@	WatchlistManager.jsx:509
+<WatchlistManager>		
+App	@	App.jsx:90
+<App>		
+(anonymous)	@	main.jsx:16
+
+
+NaturalLanguageSearch.jsx:35 [2026-01-19T14:56:40.716Z] 🔍 [NATURAL_SEARCH] API_CALL_ERROR: {"endpoint":"getSearchHistory","userId":"68385b9981097c6b4042dab4","duration":"2ms","error":"searchApi.getSearchHistory is not a function"} 
+{timestamp: '2026-01-19T14:56:40.716Z', feature: 'NATURAL_SEARCH', action: 'API_CALL_ERROR', data: {…}, level: 'error', …}
+logSearchFeature	@	NaturalLanguageSearch.jsx:35
+loadSearchHistory	@	NaturalLanguageSearch.jsx:106
+(anonymous)	@	NaturalLanguageSearch.jsx:79
+<NaturalLanguageSearch>		
+App	@	App.jsx:105
+
+NaturalLanguageSearch.jsx:35 [2026-01-19T14:56:45.445Z] 🔍 [NATURAL_SEARCH] ADVANCED_SEARCH_ERROR: {"userId":"68385b9981097c6b4042dab4","query":"","duration":"1ms","error":"searchApi.advancedSearch is not a function"} 
+{timestamp: '2026-01-19T14:56:45.445Z', feature: 'NATURAL_SEARCH', action: 'ADVANCED_SEARCH_ERROR', data: {…}, level: 'error', …}
+logSearchFeature	@	NaturalLanguageSearch.jsx:35
+handleAdvancedSearch	@	NaturalLanguageSearch.jsx:268
+<Button>		
+NaturalLanguageSearch	@	NaturalLanguageSearch.jsx:528
+<NaturalLanguageSearch>		
+App	@	App.jsx:105
+NaturalLanguageSearch.jsx:35 [2026-01-19T14:56:52.544Z] 🔍 [NATURAL_SEARCH] NATURAL_SEARCH_ERROR: {"userId":"68385b9981097c6b4042dab4","query":"Shashwat","duration":"1ms","error":"searchApi.naturalLanguageSearch is not a function"} 
+{timestamp: '2026-01-19T14:56:52.544Z', feature: 'NATURAL_SEARCH', action: 'NATURAL_SEARCH_ERROR', data: {…}, level: 'error', …}
+logSearchFeature	@	NaturalLanguageSearch.jsx:35
+handleNaturalLanguageSearch	@	NaturalLanguageSearch.jsx:218
+<Form>		
+NaturalLanguageSearch	@	NaturalLanguageSearch.jsx:514
+<NaturalLanguageSearch>		
+App
+
+
+
+NaturalLanguageSearch.jsx:35 [2026-01-19T14:57:36.014Z] 🔍 [NATURAL_SEARCH] API_CALL_ERROR: {"endpoint":"getSearchHistory","userId":"68385b9981097c6b4042dab4","duration":"1ms","error":"searchApi.getSearchHistory is not a function"} 
+{timestamp: '2026-01-19T14:57:36.014Z', feature: 'NATURAL_SEARCH', action: 'API_CALL_ERROR', data: {…}, level: 'error', …}
+logSearchFeature	@	NaturalLanguageSearch.jsx:35
+loadSearchHistory	@	NaturalLanguageSearch.jsx:106
+(anonymous)	@	NaturalLanguageSearch.jsx:79
+<NaturalLanguageSearch>		
+App	@	App.jsx:105
+
+EnhancedProfile.jsx:37 [2026-01-19T14:57:38.899Z] 👤 [ENHANCED_PROFILE] API_CALL_ERROR: {"endpoint":"getSocialStats","userId":"68385b9981097c6b4042dab4","duration":"1ms","error":"socialApi.getSocialStats is not a function"} 
+{timestamp: '2026-01-19T14:57:38.899Z', feature: 'ENHANCED_PROFILE', action: 'API_CALL_ERROR', data: {…}, level: 'error', …}
+logProfileFeature	@	EnhancedProfile.jsx:37
+loadSocialStats	@	EnhancedProfile.jsx:180
+(anonymous)	@	EnhancedProfile.jsx:99
+<EnhancedProfile>		
+App	@	App.jsx:95
+EnhancedProfile.jsx:37 [2026-01-19T14:57:38.902Z] 👤 [ENHANCED_PROFILE] API_CALL_ERROR: {"endpoint":"getRecommendationPreferences","userId":"68385b9981097c6b4042dab4","duration":"1ms","error":"recommendationsApi.getRecommendationPreferences is not a function"} 
+{timestamp: '2026-01-19T14:57:38.902Z', feature: 'ENHANCED_PROFILE', action: 'API_CALL_ERROR', data: {…}, level: 'error', …}
+logProfileFeature	@	EnhancedProfile.jsx:37
+loadUserPreferences	@	EnhancedProfile.jsx:214
+(anonymous)	@	EnhancedProfile.jsx:100
+<EnhancedProfile>		
+App	@	App.jsx:95
+EnhancedProfile.jsx:229 Failed to load user activity: TypeError: analyticsApi.getUserActivity is not a function
+    at loadUserActivity (EnhancedProfile.jsx:226:43)
+    at EnhancedProfile.jsx:101:7
+EnhancedProfile.jsx:238 Failed to load user stats: TypeError: analyticsApi.getUserAnalytics is not a function
+    at loadUserStats (EnhancedProfile.jsx:235:43)
+    at EnhancedProfile.jsx:102:7
+loadUserStats	@	EnhancedProfile.jsx:238
+(anonymous)	@	EnhancedProfile.jsx:102
+<EnhancedProfile>		
+App	@	App.jsx:95
+enhancedApi.jsx:6 
+ GET http://localhost:8080/api/v2/profile/68385b9… 500 (Internal Server Error)
+Promise.then		
+getUserProfile	@	enhancedApi.jsx:6
+loadUserProfile	@	EnhancedProfile.jsx:120
+(anonymous)	@	EnhancedProfile.jsx:98
+<EnhancedProfile>		
+App	@	App.jsx:95
+axiosConfig.jsx:66 🔴 [FRONTEND API] 2026-01-19T14:57:38.971Z - Response Error: 
+AxiosError {message: 'Request failed with status code 500', name: 'AxiosError', code: 'ERR_BAD_RESPONSE', config: {…}, request: XMLHttpRequest, …}
+(anonymous)	@	axiosConfig.jsx:66
+Promise.then		
+getUserProfile	@	enhancedApi.jsx:6
+loadUserProfile	@	EnhancedProfile.jsx:120
+(anonymous)	@	EnhancedProfile.jsx:98
+<EnhancedProfile>		
+App	@	App.jsx:95
+axiosConfig.jsx:71 🔴 [FRONTEND API] Error Status: 500 Internal Server Error
+(anonymous)	@	axiosConfig.jsx:71
+Promise.then		
+getUserProfile	@	enhancedApi.jsx:6
+loadUserProfile	@	EnhancedProfile.jsx:120
+(anonymous)	@	EnhancedProfile.jsx:98
+<EnhancedProfile>		
+App	@	App.jsx:95
+axiosConfig.jsx:72 🔴 [FRONTEND API] Error Data: 
+{error: 'mongo: no documents in result'}
+(anonymous)	@	axiosConfig.jsx:72
+Promise.then		
+getUserProfile	@	enhancedApi.jsx:6
+loadUserProfile	@	EnhancedProfile.jsx:120
+(anonymous)	@	EnhancedProfile.jsx:98
+<EnhancedProfile>		
+App	@	App.jsx:95
+axiosConfig.jsx:73 🔴 [FRONTEND API] Error Headers: 
+AxiosHeaders {content-length: '41', content-type: 'application/json; charset=utf-8'}
+(anonymous)	@	axiosConfig.jsx:73
+Promise.then		
+getUserProfile	@	enhancedApi.jsx:6
+loadUserProfile	@	EnhancedProfile.jsx:120
+(anonymous)	@	EnhancedProfile.jsx:98
+<EnhancedProfile>		
+App	@	App.jsx:95
+EnhancedProfile.jsx:37 [2026-01-19T14:57:38.975Z] 👤 [ENHANCED_PROFILE] API_CALL_ERROR: {"endpoint":"getUserProfile","userId":"68385b9981097c6b4042dab4","duration":"80ms","error":"Request failed with status code 500","status":500} 
+{timestamp: '2026-01-19T14:57:38.975Z', feature: 'ENHANCED_PROFILE', action: 'API_CALL_ERROR', data: {…}, level: 'error', …}
+logProfileFeature	@	EnhancedProfile.jsx:37
+loadUserProfile	@	EnhancedProfile.jsx:144
+await in loadUserProfile		
+(anonymous)	@	EnhancedProfile.jsx:98
+<EnhancedProfile>		
+App	@	App.jsx:95
+
+Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (AnalyticsDashboard.jsx:103:43)
+    at AnalyticsDashboard.jsx:40:7
+loadRealTimeMetrics	@	AnalyticsDashboard.jsx:106
+(anonymous)	@	AnalyticsDashboard.jsx:40
+<AnalyticsDashboard>		
+App	@	App.jsx:80
+
+
+AnalyticsDashboard.jsx:106 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (AnalyticsDashboard.jsx:103:43)
+    at AnalyticsDashboard.jsx:40:7
+    at Object.react_stack_bottom_frame (react-dom_client.js?v=e561f48e:18567:20)
+    at runWithFiberInDEV (react-dom_client.js?v=e561f48e:997:72)
+    at commitHookEffectListMount (react-dom_client.js?v=e561f48e:9411:163)
+    at commitHookPassiveMountEffects (react-dom_client.js?v=e561f48e:9465:60)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11040:29)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11055:13)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+loadRealTimeMetrics @ AnalyticsDashboard.jsx:106
+(anonymous) @ AnalyticsDashboard.jsx:40
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<AnalyticsDashboard>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:80
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:38:7
+    at Object.react_stack_bottom_frame (react-dom_client.js?v=e561f48e:18567:20)
+    at runWithFiberInDEV (react-dom_client.js?v=e561f48e:997:72)
+    at commitHookEffectListMount (react-dom_client.js?v=e561f48e:9411:163)
+    at commitHookPassiveMountEffects (react-dom_client.js?v=e561f48e:9465:60)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11040:29)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11055:13)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:38
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:39:7
+    at Object.react_stack_bottom_frame (react-dom_client.js?v=e561f48e:18567:20)
+    at runWithFiberInDEV (react-dom_client.js?v=e561f48e:997:72)
+    at commitHookEffectListMount (react-dom_client.js?v=e561f48e:9411:163)
+    at commitHookPassiveMountEffects (react-dom_client.js?v=e561f48e:9465:60)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11040:29)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11055:13)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:39
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:40:7
+    at Object.react_stack_bottom_frame (react-dom_client.js?v=e561f48e:18567:20)
+    at runWithFiberInDEV (react-dom_client.js?v=e561f48e:997:72)
+    at commitHookEffectListMount (react-dom_client.js?v=e561f48e:9411:163)
+    at commitHookPassiveMountEffects (react-dom_client.js?v=e561f48e:9465:60)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11040:29)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11055:13)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:40
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:93 Failed to load error logs: TypeError: monitoringApi.getErrorLogs is not a function
+    at loadErrorLogs (SystemMonitoring.jsx:90:44)
+    at SystemMonitoring.jsx:41:7
+    at Object.react_stack_bottom_frame (react-dom_client.js?v=e561f48e:18567:20)
+    at runWithFiberInDEV (react-dom_client.js?v=e561f48e:997:72)
+    at commitHookEffectListMount (react-dom_client.js?v=e561f48e:9411:163)
+    at commitHookPassiveMountEffects (react-dom_client.js?v=e561f48e:9465:60)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11040:29)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11055:13)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+loadErrorLogs @ SystemMonitoring.jsx:93
+(anonymous) @ SystemMonitoring.jsx:41
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:102 Failed to load API metrics: TypeError: monitoringApi.getApiMetrics is not a function
+    at loadApiMetrics (SystemMonitoring.jsx:99:44)
+    at SystemMonitoring.jsx:42:7
+    at Object.react_stack_bottom_frame (react-dom_client.js?v=e561f48e:18567:20)
+    at runWithFiberInDEV (react-dom_client.js?v=e561f48e:997:72)
+    at commitHookEffectListMount (react-dom_client.js?v=e561f48e:9411:163)
+    at commitHookPassiveMountEffects (react-dom_client.js?v=e561f48e:9465:60)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11040:29)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11055:13)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+loadApiMetrics @ SystemMonitoring.jsx:102
+(anonymous) @ SystemMonitoring.jsx:42
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:111 Failed to load database stats: TypeError: monitoringApi.getDatabaseStats is not a function
+    at loadDatabaseStats (SystemMonitoring.jsx:108:44)
+    at SystemMonitoring.jsx:43:7
+    at Object.react_stack_bottom_frame (react-dom_client.js?v=e561f48e:18567:20)
+    at runWithFiberInDEV (react-dom_client.js?v=e561f48e:997:72)
+    at commitHookEffectListMount (react-dom_client.js?v=e561f48e:9411:163)
+    at commitHookPassiveMountEffects (react-dom_client.js?v=e561f48e:9465:60)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11040:29)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11055:13)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+loadDatabaseStats @ SystemMonitoring.jsx:111
+(anonymous) @ SystemMonitoring.jsx:43
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:120 Failed to load cache stats: TypeError: monitoringApi.getCacheStats is not a function
+    at loadCacheStats (SystemMonitoring.jsx:117:44)
+    at SystemMonitoring.jsx:44:7
+    at Object.react_stack_bottom_frame (react-dom_client.js?v=e561f48e:18567:20)
+    at runWithFiberInDEV (react-dom_client.js?v=e561f48e:997:72)
+    at commitHookEffectListMount (react-dom_client.js?v=e561f48e:9411:163)
+    at commitHookPassiveMountEffects (react-dom_client.js?v=e561f48e:9465:60)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11040:29)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11055:13)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+loadCacheStats @ SystemMonitoring.jsx:120
+(anonymous) @ SystemMonitoring.jsx:44
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:129 Failed to load server metrics: TypeError: monitoringApi.getServerMetrics is not a function
+    at loadServerMetrics (SystemMonitoring.jsx:126:44)
+    at SystemMonitoring.jsx:45:7
+    at Object.react_stack_bottom_frame (react-dom_client.js?v=e561f48e:18567:20)
+    at runWithFiberInDEV (react-dom_client.js?v=e561f48e:997:72)
+    at commitHookEffectListMount (react-dom_client.js?v=e561f48e:9411:163)
+    at commitHookPassiveMountEffects (react-dom_client.js?v=e561f48e:9465:60)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11040:29)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+    at commitPassiveMountOnFiber (react-dom_client.js?v=e561f48e:11055:13)
+    at recursivelyTraversePassiveMountEffects (react-dom_client.js?v=e561f48e:11010:13)
+loadServerMetrics @ SystemMonitoring.jsx:129
+(anonymous) @ SystemMonitoring.jsx:45
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+:5173/monitoring:1 Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was receivedUnderstand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+
+
+
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+:5173/monitoring:1 Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was receivedUnderstand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+loadRealTimeMetrics @ SystemMonitoring.jsx:75
+(anonymous) @ SystemMonitoring.jsx:54
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:84 Failed to load performance metrics: TypeError: monitoringApi.getPerformanceMetrics is not a function
+    at loadPerformanceMetrics (SystemMonitoring.jsx:81:44)
+    at SystemMonitoring.jsx:55:9
+loadPerformanceMetrics @ SystemMonitoring.jsx:84
+(anonymous) @ SystemMonitoring.jsx:55
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:66 Failed to load system health: TypeError: monitoringApi.getSystemHealth is not a function
+    at loadSystemHealth (SystemMonitoring.jsx:63:44)
+    at SystemMonitoring.jsx:53:9
+loadSystemHealth @ SystemMonitoring.jsx:66
+(anonymous) @ SystemMonitoring.jsx:53
+setInterval
+(anonymous) @ SystemMonitoring.jsx:52
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18567
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+commitHookEffectListMount @ react-dom_client.js?v=e561f48e:9411
+commitHookPassiveMountEffects @ react-dom_client.js?v=e561f48e:9465
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11040
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11055
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11201
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11033
+recursivelyTraversePassiveMountEffects @ react-dom_client.js?v=e561f48e:11010
+commitPassiveMountOnFiber @ react-dom_client.js?v=e561f48e:11066
+flushPassiveEffects @ react-dom_client.js?v=e561f48e:13150
+(anonymous) @ react-dom_client.js?v=e561f48e:12776
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36
+<SystemMonitoring>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=e561f48e:247
+App @ App.jsx:100
+react_stack_bottom_frame @ react-dom_client.js?v=e561f48e:18509
+renderWithHooks @ react-dom_client.js?v=e561f48e:5654
+updateFunctionComponent @ react-dom_client.js?v=e561f48e:7475
+beginWork @ react-dom_client.js?v=e561f48e:8525
+runWithFiberInDEV @ react-dom_client.js?v=e561f48e:997
+performUnitOfWork @ react-dom_client.js?v=e561f48e:12561
+workLoopConcurrentByScheduler @ react-dom_client.js?v=e561f48e:12557
+renderRootConcurrent @ react-dom_client.js?v=e561f48e:12539
+performWorkOnRoot @ react-dom_client.js?v=e561f48e:11766
+performWorkOnRootViaSchedulerTask @ react-dom_client.js?v=e561f48e:13505
+performWorkUntilDeadline @ react-dom_client.js?v=e561f48e:36Understand this error
+SystemMonitoring.jsx:75 Failed to load real-time metrics: TypeError: analyticsApi.getRealTimeMetrics is not a function
+    at loadRealTimeMetrics (SystemMonitoring.jsx:72:43)
+    at SystemMonitoring.jsx:54:9
+
+
+
+See these logs  See backend logs an dthen fix of all of these issues
