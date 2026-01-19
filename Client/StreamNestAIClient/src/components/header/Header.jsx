@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
+import NavDropdown from 'react-bootstrap/NavDropdown'
 import {useNavigate, NavLink, Link} from 'react-router-dom'
 import useAuth from '../../hooks/useAuth';
 import logo from '../../assets/StreamNestAILogo.png';
@@ -38,6 +39,40 @@ const Header = ({handleLogout}) => {
                         <Nav.Link as = {NavLink} to="/explore">
                             ✨ Explore
                         </Nav.Link>
+                        
+                        {/* New Features Dropdown */}
+                        <NavDropdown title="🚀 Features" id="features-nav-dropdown">
+                            <NavDropdown.Item as = {NavLink} to="/social">
+                                👥 Social Features
+                            </NavDropdown.Item>
+                            <NavDropdown.Item as = {NavLink} to="/recommendations">
+                                🎯 Advanced Recommendations
+                            </NavDropdown.Item>
+                            <NavDropdown.Item as = {NavLink} to="/watchlist">
+                                📝 Watchlist Manager
+                            </NavDropdown.Item>
+                            <NavDropdown.Item as = {NavLink} to="/search">
+                                🔍 Natural Search
+                            </NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item as = {NavLink} to="/profile-enhanced">
+                                👤 Enhanced Profile
+                            </NavDropdown.Item>
+                        </NavDropdown>
+
+                        {/* Admin & Analytics Dropdown */}
+                        <NavDropdown title="📊 Dashboard" id="dashboard-nav-dropdown">
+                            <NavDropdown.Item as = {NavLink} to="/analytics">
+                                📈 Analytics Dashboard
+                            </NavDropdown.Item>
+                            <NavDropdown.Item as = {NavLink} to="/monitoring">
+                                🖥️ System Monitoring
+                            </NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item as = {NavLink} to="/admin">
+                                ⚙️ Admin Panel
+                            </NavDropdown.Item>
+                        </NavDropdown>
                     </Nav>
     
                     <Nav className ="ms-auto align-items-center" style={{padding: '10px'}}>
